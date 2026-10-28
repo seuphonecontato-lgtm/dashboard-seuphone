@@ -204,7 +204,7 @@
 <!-- ══════════════════ LOGIN ══════════════════ -->
 <div id="loginScreen">
   <div class="login-logo">SeuPhone</div>
-  <div class="login-sub">Meus Resultados · Agosto 2026</div>
+  <div class="login-sub">Meus Resultados · Outubro 2026</div>
 
   <div class="login-card">
     <div class="login-label">Quem é você?</div>
@@ -341,7 +341,7 @@
 
     <!-- Evolução semanal -->
     <div class="chart-card" id="weekCard">
-      <div class="chart-title">📅 Evolução Semanal — Agosto 2026</div>
+      <div class="chart-title">📅 Evolução Semanal — Outubro 2026</div>
       <div class="chart-wrap">
         <canvas id="weekChart"></canvas>
       </div>
@@ -587,7 +587,7 @@ function showDashboard(key) {
   av.className = 'db-avatar ' + s.avatarClass;
   av.textContent = s.initials;
   document.getElementById('dbName').textContent   = s.name;
-  document.getElementById('dbPeriod').textContent = 'Agosto 2026 · Dados parciais (01/08 a 29/08)';
+  document.getElementById('dbPeriod').textContent = 'Outubro 2026 · Dados parciais (01/10–24/10 · 20 d.u.';
 
   // Ranking banner
   const rb = document.getElementById('rankBanner');
@@ -598,24 +598,25 @@ function showDashboard(key) {
 
   // KPI cards
   document.getElementById('kVendas').textContent    = j.vendas;
-  const vChg = pct(j.vendas, m.vendas);
+  const hasPrev = m.vendas !== null;
   const kVChg = document.getElementById('kVendasChg');
-  kVChg.textContent = vChg + ' vs Jul'; kVChg.className = 'kpi-change ' + chgClass(j.vendas, m.vendas);
+  if (hasPrev) { kVChg.textContent = pct(j.vendas, m.vendas) + ' vs Set'; kVChg.className = 'kpi-change ' + chgClass(j.vendas, m.vendas); }
+  else { kVChg.textContent = 'Nova integrante'; kVChg.className = 'kpi-change up'; }
 
   document.getElementById('kAcess').textContent = brl(j.acess);
-  const aChg = pct(j.acess, m.acess);
   const kAChg = document.getElementById('kAcessChg');
-  kAChg.textContent = aChg + ' vs Jul'; kAChg.className = 'kpi-change ' + chgClass(j.acess, m.acess);
+  if (hasPrev) { kAChg.textContent = pct(j.acess, m.acess) + ' vs Set'; kAChg.className = 'kpi-change ' + chgClass(j.acess, m.acess); }
+  else { kAChg.textContent = '—'; kAChg.className = 'kpi-change'; }
 
   document.getElementById('kConv').textContent = j.conv.toFixed(1).replace('.',',') + '%';
-  const cChg = pp(j.conv, m.conv);
   const kCChg = document.getElementById('kConvChg');
-  kCChg.textContent = cChg + ' vs Jul'; kCChg.className = 'kpi-change ' + chgClass(j.conv, m.conv);
+  if (hasPrev) { kCChg.textContent = pp(j.conv, m.conv) + ' vs Set'; kCChg.className = 'kpi-change ' + chgClass(j.conv, m.conv); }
+  else { kCChg.textContent = '—'; kCChg.className = 'kpi-change'; }
 
   document.getElementById('kTicket').textContent = brl(j.ticket);
-  const tChg = pct(j.ticket, m.ticket);
   const kTChg = document.getElementById('kTicketChg');
-  kTChg.textContent = tChg + ' vs Jul'; kTChg.className = 'kpi-change ' + chgClass(j.ticket, m.ticket);
+  if (hasPrev) { kTChg.textContent = pct(j.ticket, m.ticket) + ' vs Set'; kTChg.className = 'kpi-change ' + chgClass(j.ticket, m.ticket); }
+  else { kTChg.textContent = '—'; kTChg.className = 'kpi-change'; }
 
   // Performance bar
   const pf = document.getElementById('perfFill');
@@ -629,18 +630,18 @@ function showDashboard(key) {
   const perfPctEl = document.getElementById('perfPct');
   perfPctEl.textContent = j.perf.toFixed(1).replace('.',',') + '%';
   perfPctEl.style.color = j.perf >= 100 ? '#34d399' : j.perf >= 80 ? '#fbbf24' : '#f87171';
-  document.getElementById('perfDetail').textContent = j.vendas + ' vendas · meta proporcional: ~96 (25/26 × 100)';
-  document.getElementById('perfDu').textContent     = 'Agosto: 26 dias úteis totais · 25 decorridos (01/08–29/08, sem feriados)';
+  document.getElementById('perfDetail').textContent = j.vendas + ' vendas · meta proporcional: ~77 (20/26 × 100)';
+  document.getElementById('perfDu').textContent     = 'Outubro: 26 dias úteis totais · 20 decorridos (01/10–24/10, feriado 12/10)';
 
   // Metrics table
   document.getElementById('mMsgs').textContent      = j.msgs + ' msgs';
-  document.getElementById('mMsgsPrev').textContent  = 'Jul: ' + m.msgs + ' msgs · ' + pct(j.msgs, m.msgs);
+  document.getElementById('mMsgsPrev').textContent  = hasPrev ? 'Set: ' + m.msgs + ' msgs · ' + pct(j.msgs, m.msgs) : 'Nova integrante — sem histórico anterior';
   document.getElementById('mConv').textContent      = j.conv.toFixed(1).replace('.',',') + '%';
-  document.getElementById('mConvPrev').textContent  = 'Jul: ' + m.conv.toFixed(1).replace('.',',') + '% · ' + pp(j.conv, m.conv);
+  document.getElementById('mConvPrev').textContent  = hasPrev ? 'Set: ' + m.conv.toFixed(1).replace('.',',') + '% · ' + pp(j.conv, m.conv) : 'Nova integrante — sem histórico anterior';
   document.getElementById('mAcess').textContent     = brl(j.acess);
-  document.getElementById('mAcessPrev').textContent = 'Jul: ' + brl(m.acess) + ' · ' + pct(j.acess, m.acess);
+  document.getElementById('mAcessPrev').textContent = hasPrev ? 'Set: ' + brl(m.acess) + ' · ' + pct(j.acess, m.acess) : 'Nova integrante — sem histórico anterior';
   document.getElementById('mTicket').textContent    = brl(j.ticket);
-  document.getElementById('mTicketPrev').textContent= 'Jul: ' + brl(m.ticket) + ' · ' + pct(j.ticket, m.ticket);
+  document.getElementById('mTicketPrev').textContent= hasPrev ? 'Set: ' + brl(m.ticket) + ' · ' + pct(j.ticket, m.ticket) : 'Nova integrante — sem histórico anterior';
 
   // Trend chart
   if (trendChartInstance) trendChartInstance.destroy();
