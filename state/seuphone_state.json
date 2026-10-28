@@ -1,0 +1,56 @@
+{
+  "_comment": "Estado da automação diária SeuPhone. Atualizado pelo scheduled task.",
+  "month": "2026-10",
+  "last_processed_date": "2026-10-28",
+  "processed_order_ids": [
+    27236521817, 27136836154, 27230156161, 27229248679, 27226565408,
+    27248401245, 27239218503, 27237133304, 27235556043, 27231343666,
+    27231164111, 27230881896, 27229952674,
+    27247795554, 27239338358, 27235831391, 27235536279, 27228910697,
+    27228247931, 27226717702, 27211036294,
+    27248202650, 27241029843, 27228216474, 27226636076, 27216547227
+  ],
+  "base_manual": {
+    "_note": "Dados inseridos manualmente pelo Carlos (semanas 1-4, Oct 1-24)",
+    "dora":   {"vendas": 44, "acess": 5150.00},
+    "mariah": {"vendas": 49, "acess": 7466.79},
+    "gaby":   {"vendas": 48, "acess": 4458.00},
+    "rayssa": {"vendas": 38, "acess": 2333.00}
+  },
+  "accumulated_bling": {
+    "_note": "Acumulado automaticamente do Bling a partir de 2026-10-26",
+    "dora":   {"vendas": 5, "acess": 240.00},
+    "mariah": {"vendas": 8, "acess": 709.57},
+    "gaby":   {"vendas": 8, "acess": 1335.52},
+    "rayssa": {"vendas": 5, "acess": 890.00}
+  },
+  "totals_outubro": {
+    "_note": "base_manual + accumulated_bling = valores atuais no HTML",
+    "dora":   {"vendas": 49, "acess": 5390.00},
+    "mariah": {"vendas": 57, "acess": 8176.36},
+    "gaby":   {"vendas": 56, "acess": 5793.52},
+    "rayssa": {"vendas": 43, "acess": 3223.00}
+  },
+  "vendedor_ids": {
+    "dora":   15596144709,
+    "mariah": 15596843551,
+    "gaby":   15596411344,
+    "rayssa": 15596979230
+  },
+  "accessories_product_codes": [
+    "7899716",
+    "7908100",
+    "ACESS_",
+    "CASETRNASP"
+  ],
+  "accessories_keywords": [
+    "PELÍCULA", "PELICULA", "CAPA", "CASE", "CARREGADOR", "CABO",
+    "FONTE", "PELÍCULA HPRIME", "GORILA", "HPRIME", "GSHIELD", "KAIDI"
+  ],
+  "exclude_situacao_ids": [6, 12],
+  "github": {
+    "repo": "seuphonecontato-lgtm/dashboard-seuphone",
+    "branch": "main",
+    "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
+  }
+}
