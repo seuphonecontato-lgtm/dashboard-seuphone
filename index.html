@@ -767,11 +767,11 @@
   <!-- EVOLUÇÃO SEMANAL -->
   <div class="ranking-card" style="margin-top:24px">
     <h2>📅 Evolução Semanal — Outubro 2026</h2>
-    <p>Vendas por semana · parcial (01/10 a 04/10) · Gaby voltou · Rayssa nova</p>
+    <p>Vendas por semana · parcial (01/10 a 24/10 · 20 d.u.) · Gaby voltou · Rayssa nova</p>
     <div class="chart-wrap" style="height:260px">
       <canvas id="weeklyChart"></canvas>
     </div>
-    <p class="nota" style="margin-top:12px">Sem 1: 01–04/out (3 d.u. · 04/out=Dom) · Total parcial: 3 d.u. de 26 d.u. · Gaby voltou de férias · Rayssa nova integrante · 12/out feriado N. Sra. Aparecida</p>
+    <p class="nota" style="margin-top:12px">Sem 1: 01–04/out (3 d.u.) · Sem 2: 05–11/out (5 d.u.) · Sem 3: 12–17/out (5 d.u., 12/out feriado) · Sem 4: 18–24/out (7 d.u.) · Total: 20 d.u. de 26 d.u.</p>
   </div>
 
 
@@ -1455,8 +1455,7 @@ new Chart(document.getElementById('weeklyChart'), {
     },
     scales: {
       x: { grid: { display: false }, ticks: { color:'#94a3b8', font: { family:'Inter', size:11 } }, border: { color: '#2d3748' } },
-      y: { grid: defaults.grid, ticks: { ...defaults.ticks, stepSize: 5 }, border: { color: '#2d3748' }, beginAtZero: true },
-      plugins: { legend: { labels: { boxWidth: 10 } } }
+      y: { grid: defaults.grid, ticks: { ...defaults.ticks, stepSize: 5 }, border: { color: '#2d3748' }, beginAtZero: true }
     }
   }
 });
