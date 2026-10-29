@@ -264,17 +264,17 @@
     <!-- KPI cards -->
     <div class="kpi-grid">
       <div class="kpi-card c-purple">
-        <div class="kpi-label">Vendas Ago</div>
+        <div class="kpi-label">Vendas Out</div>
         <div class="kpi-value" id="kVendas"></div>
         <div class="kpi-change" id="kVendasChg"></div>
       </div>
       <div class="kpi-card c-green">
-        <div class="kpi-label">Acessórios Ago</div>
+        <div class="kpi-label">Acessórios Out</div>
         <div class="kpi-value sm" id="kAcess"></div>
         <div class="kpi-change" id="kAcessChg"></div>
       </div>
       <div class="kpi-card c-blue">
-        <div class="kpi-label">Conv. Ago</div>
+        <div class="kpi-label">Conv. Out</div>
         <div class="kpi-value" id="kConv"></div>
         <div class="kpi-change" id="kConvChg"></div>
       </div>
@@ -300,7 +300,7 @@
 
     <!-- Trend chart -->
     <div class="chart-card">
-      <div class="chart-title">Vendas mensais — Jan a Ago 2026</div>
+      <div class="chart-title">Vendas mensais — Jan a Out 2026</div>
       <div class="chart-wrap">
         <canvas id="trendChart"></canvas>
       </div>
@@ -308,7 +308,7 @@
 
     <!-- Metrics vs last month -->
     <div class="metrics-card">
-      <div class="metrics-title">Setembro vs Agosto — parcial Set (10 d.u.) · Ago completo (26 d.u.)</div>
+      <div class="metrics-title">Outubro vs Setembro — parcial Out (23 d.u.) · Set completo (26 d.u.)</div>
       <div class="metric-row">
         <div class="metric-name">Mensagens recebidas</div>
         <div class="metric-vals">
@@ -354,7 +354,7 @@
     </div>
   </div>
 
-  <div class="footer">SeuPhone · Dados de Outubro 2026 (parcial · 01–24/10) · Atualizado em 24/10/2026</div>
+  <div class="footer">SeuPhone · Dados de Outubro 2026 (parcial · 01–28/10) · Atualizado em 28/10/2026</div>
 </div>
 
 <script>
@@ -526,7 +526,7 @@ function generateTips(j) {
   // Tip 1: Performance
   if (j.perf >= 100) {
     tips.push({ icon:'🏆', tag:'META BATIDA', tagColor:'#34d399', bgColor:'rgba(52,211,153,0.08)',
-      text:'Você bateu a meta! Continue o ritmo. Cada venda extra aumenta seu histórico e cria uma base forte para agosto.' });
+      text:'Você bateu a meta! Continue o ritmo. Cada venda extra aumenta seu histórico e cria uma base forte para novembro.' });
   } else if (j.perf >= 90) {
     tips.push({ icon:'🎯', tag:'QUASE LÁ', tagColor:'#fbbf24', bgColor:'rgba(251,191,36,0.08)',
       text:'Faltam apenas ' + gap + ' vendas para bater a meta! Um esforço final nessa semana garante 100% — responda todas as mensagens pendentes hoje.' });
@@ -652,7 +652,7 @@ function showDashboard(key) {
   trendChartInstance = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago'],
+      labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
       datasets: [{
         data: s.history,
         borderColor: borderClr,
@@ -700,17 +700,17 @@ function showDashboard(key) {
   weekChartInstance = new Chart(wctx, {
     type: 'bar',
     data: {
-      labels: [['Sem 1 (01–08/ago)', 'vs', 'Sem 2 (09–16/ago)']],
+      labels: [['Sem 1 (01–04/out)', 'vs', 'Sem 2 (05–11/out)']],
       datasets: [
         {
-          label: 'Sem 1 (01–08/ago)',
+          label: 'Sem 1 (01–04/out)',
           data: [s.weeks.vendas[0]],
           backgroundColor: 'rgba(100,116,139,0.55)',
           borderColor: '#64748b',
           borderWidth: 2, borderRadius: 10, borderSkipped: false
         },
         {
-          label: 'Sem 2 (09–16/ago)',
+          label: 'Sem 2 (05–11/out)',
           data: [s.weeks.vendas[1]],
           backgroundColor: borderClr + 'cc',
           borderColor: borderClr,
