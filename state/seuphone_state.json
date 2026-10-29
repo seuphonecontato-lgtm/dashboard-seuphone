@@ -30,7 +30,13 @@
     27226636076,
     27216547227,
     27250205480,
-    27249748472
+    27249748472,
+    27256814386,
+    27256734759,
+    27255750316,
+    27257328980,
+    27240841581,
+    27258752837
   ],
   "base_manual": {
     "_note": "Conferido no Bling em 29/10 (01-25/10): cada aparelho = 1 venda; manutencao fora; trocas sem pagamento de diferenca fora (pedidos 17930, 17972, 17786). Acessorios = soma valor x quantidade.",
@@ -52,40 +58,40 @@
     }
   },
   "accumulated_bling": {
-    "_note": "Bling 26-29/10, regra nova (aparelhos por unidade)",
+    "_note": "Bling 26-29/10, regra nova (aparelhos por unidade); atualizado 29/10 noite",
     "dora": {
-      "vendas": 2,
-      "acess": 240.0
+      "vendas": 4,
+      "acess": 490.0
     },
     "mariah": {
-      "vendas": 6,
-      "acess": 779.57
+      "vendas": 7,
+      "acess": 939.54
     },
     "gaby": {
-      "vendas": 6,
+      "vendas": 8,
       "acess": 1335.52
     },
     "rayssa": {
-      "vendas": 5,
+      "vendas": 7,
       "acess": 890.0
     }
   },
   "totals_outubro": {
     "_note": "base_manual + accumulated_bling; acessorios conferidos com relatorio do Bling",
     "dora": {
-      "vendas": 46,
-      "acess": 5390.0
+      "vendas": 48,
+      "acess": 5640.0
     },
     "mariah": {
-      "vendas": 56,
-      "acess": 8774.36
+      "vendas": 57,
+      "acess": 8934.33
     },
     "gaby": {
-      "vendas": 55,
+      "vendas": 57,
       "acess": 5265.52
     },
     "rayssa": {
-      "vendas": 43,
+      "vendas": 45,
       "acess": 3223.0
     }
   },
