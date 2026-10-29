@@ -694,29 +694,18 @@ function showDashboard(key) {
     }
   });
 
-  // Gráfico semanal
+  // Gráfico semanal — dinâmico, mostra todas as semanas disponíveis
   if (weekChartInstance) weekChartInstance.destroy();
   const wctx = document.getElementById('weekChart').getContext('2d');
+  const wkLabels = s.weeks.labels.map(l => l.join('\n'));
+  const wkData   = s.weeks.vendas;
+  const wkColors = wkData.map((_, i) => i === wkData.length - 1 ? borderClr + 'cc' : 'rgba(100,116,139,0.45)');
+  const wkBorders = wkData.map((_, i) => i === wkData.length - 1 ? borderClr : '#64748b');
   weekChartInstance = new Chart(wctx, {
     type: 'bar',
     data: {
-      labels: [['Sem 1 (01–04/out)', 'vs', 'Sem 2 (05–11/out)']],
-      datasets: [
-        {
-          label: 'Sem 1 (01–04/out)',
-          data: [s.weeks.vendas[0]],
-          backgroundColor: 'rgba(100,116,139,0.55)',
-          borderColor: '#64748b',
-          borderWidth: 2, borderRadius: 10, borderSkipped: false
-        },
-        {
-          label: 'Sem 2 (05–11/out)',
-          data: [s.weeks.vendas[1]],
-          backgroundColor: borderClr + 'cc',
-          borderColor: borderClr,
-          borderWidth: 2, borderRadius: 10, borderSkipped: false
-        }
-      ]
+      labels: wkLabels,
+      datasets: [{ data: wkData, backgroundColor: wkColors, borderColor: wkBorders, borderWidth: 2, borderRadius: 10, borderSkipped: false }]
     },
     plugins: [ChartDataLabels],
     options: {
@@ -727,11 +716,11 @@ function showDashboard(key) {
         tooltip: { backgroundColor:'#1a1f2e', titleColor:'#94a3b8', bodyColor:'#e2e8f0', padding:10 },
         datalabels: {
           anchor: 'end', align: 'top', offset: 2,
-          color: (ctx) => ctx.dataIndex === 0 ? '#94a3b8' : borderClr,
+          color: (ctx) => ctx.dataIndex === wkData.length - 1 ? borderClr : '#94a3b8',
           font: { weight: '700', size: 12, family: 'Inter' },
           formatter: (v, ctx) => {
             if (ctx.dataIndex > 0) {
-              const prev = s.weeks.vendas[ctx.dataIndex - 1];
+              const prev = wkData[ctx.dataIndex - 1];
               const diff = v - prev;
               const sign = diff > 0 ? '▲' : diff < 0 ? '▼' : '=';
               return v + '\n' + sign + (diff > 0 ? '+' : '') + diff;
