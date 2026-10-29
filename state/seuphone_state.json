@@ -33,18 +33,18 @@
     27249748472
   ],
   "base_manual": {
-    "_note": "Dados inseridos manualmente pelo Carlos (semanas 1-4, Oct 1-24)",
+    "_note": "Conferido no Bling em 29/10 (01-25/10): cada aparelho = 1 venda; manutencao fora; trocas sem pagamento de diferenca fora (pedidos 17930, 17972, 17786). Acessorios = soma valor x quantidade.",
     "dora": {
       "vendas": 44,
       "acess": 5150.0
     },
     "mariah": {
-      "vendas": 49,
-      "acess": 7466.79
+      "vendas": 50,
+      "acess": 7994.79
     },
     "gaby": {
-      "vendas": 48,
-      "acess": 4458.0
+      "vendas": 49,
+      "acess": 3930.0
     },
     "rayssa": {
       "vendas": 38,
@@ -52,17 +52,17 @@
     }
   },
   "accumulated_bling": {
-    "_note": "Acumulado automaticamente do Bling a partir de 2026-10-26",
+    "_note": "Bling 26-29/10, regra nova (aparelhos por unidade)",
     "dora": {
-      "vendas": 5,
+      "vendas": 2,
       "acess": 240.0
     },
     "mariah": {
-      "vendas": 9,
+      "vendas": 6,
       "acess": 779.57
     },
     "gaby": {
-      "vendas": 9,
+      "vendas": 6,
       "acess": 1335.52
     },
     "rayssa": {
@@ -71,18 +71,18 @@
     }
   },
   "totals_outubro": {
-    "_note": "base_manual + accumulated_bling = valores atuais no HTML",
+    "_note": "base_manual + accumulated_bling; acessorios conferidos com relatorio do Bling",
     "dora": {
-      "vendas": 49,
+      "vendas": 46,
       "acess": 5390.0
     },
     "mariah": {
-      "vendas": 58,
-      "acess": 8246.36
+      "vendas": 56,
+      "acess": 8774.36
     },
     "gaby": {
-      "vendas": 57,
-      "acess": 5793.52
+      "vendas": 55,
+      "acess": 5265.52
     },
     "rayssa": {
       "vendas": 43,
@@ -123,5 +123,14 @@
     "repo": "seuphonecontato-lgtm/dashboard-seuphone",
     "branch": "main",
     "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
-  }
+  },
+  "pendentes_confirmacao": {
+    "_note": "Pedidos de troca aguardando decisao do Carlos; ficam fora do dashboard ate confirmar. Pedido 17980 (Dora) conta como venda (cliente pagou diferenca).",
+    "numeros_pedido": [
+      17930,
+      17972,
+      17786
+    ]
+  },
+  "regras_vendas": "Cada aparelho/produto (iPhone, iPad, AirPods, Apple Watch, POCO etc.) = 1 venda por unidade. Acessorios so entram em R$ de acessorios. Manutencao fora. Troca por defeito sem diferenca paga fora; duvidas: perguntar ao Carlos antes de subir."
 }
