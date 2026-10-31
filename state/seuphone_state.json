@@ -55,7 +55,12 @@
     27267588286,
     27266620037,
     27265753628,
-    27264830032
+    27264830032,
+    27273914074,
+    27273461093,
+    27272964463,
+    27271960375,
+    27273538880
   ],
   "base_manual": {
     "_note": "Conferido no Bling em 29/10 (01-25/10): cada aparelho = 1 venda; manutencao fora; trocas sem pagamento de diferenca fora (pedidos 17930, 17972, 17786). Acessorios = soma valor x quantidade.",
@@ -77,18 +82,18 @@
     }
   },
   "accumulated_bling": {
-    "_note": "Bling 26-31/10, regra nova (aparelhos por unidade); atualizado 31/10",
+    "_note": "Bling 26-31/10, regra nova (aparelhos por unidade); atualizado 31/10 20h",
     "dora": {
       "vendas": 5,
       "acess": 740.0
     },
     "mariah": {
-      "vendas": 10,
-      "acess": 1933.54
+      "vendas": 14,
+      "acess": 2263.54
     },
     "gaby": {
-      "vendas": 10,
-      "acess": 1665.52
+      "vendas": 11,
+      "acess": 1745.52
     },
     "rayssa": {
       "vendas": 15,
@@ -102,12 +107,12 @@
       "acess": 5890.0
     },
     "mariah": {
-      "vendas": 60,
-      "acess": 9928.33
+      "vendas": 64,
+      "acess": 10258.33
     },
     "gaby": {
-      "vendas": 59,
-      "acess": 5595.52
+      "vendas": 60,
+      "acess": 5675.52
     },
     "rayssa": {
       "vendas": 53,
