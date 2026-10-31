@@ -1,7 +1,7 @@
 {
   "_comment": "Estado da automação diária SeuPhone. Atualizado pelo scheduled task.",
   "month": "2026-10",
-  "last_processed_date": "2026-10-29",
+  "last_processed_date": "2026-10-31",
   "processed_order_ids": [
     27236521817,
     27136836154,
@@ -36,7 +36,26 @@
     27255750316,
     27257328980,
     27240841581,
-    27258752837
+    27258752837,
+    27268044308,
+    27267598726,
+    27264684884,
+    27267244866,
+    27265286285,
+    27265228528,
+    27264657730,
+    27264493559,
+    27268476522,
+    27266849706,
+    27266346323,
+    27264723546,
+    27269138948,
+    27268351287,
+    27268294343,
+    27267588286,
+    27266620037,
+    27265753628,
+    27264830032
   ],
   "base_manual": {
     "_note": "Conferido no Bling em 29/10 (01-25/10): cada aparelho = 1 venda; manutencao fora; trocas sem pagamento de diferenca fora (pedidos 17930, 17972, 17786). Acessorios = soma valor x quantidade.",
@@ -58,40 +77,40 @@
     }
   },
   "accumulated_bling": {
-    "_note": "Bling 26-29/10, regra nova (aparelhos por unidade); atualizado 29/10 noite",
+    "_note": "Bling 26-31/10, regra nova (aparelhos por unidade); atualizado 31/10",
     "dora": {
-      "vendas": 4,
-      "acess": 490.0
+      "vendas": 5,
+      "acess": 740.0
     },
     "mariah": {
-      "vendas": 7,
-      "acess": 939.54
+      "vendas": 10,
+      "acess": 1933.54
     },
     "gaby": {
-      "vendas": 8,
-      "acess": 1335.52
+      "vendas": 10,
+      "acess": 1665.52
     },
     "rayssa": {
-      "vendas": 7,
+      "vendas": 15,
       "acess": 890.0
     }
   },
   "totals_outubro": {
     "_note": "base_manual + accumulated_bling; acessorios conferidos com relatorio do Bling",
     "dora": {
-      "vendas": 48,
-      "acess": 5640.0
+      "vendas": 49,
+      "acess": 5890.0
     },
     "mariah": {
-      "vendas": 57,
-      "acess": 8934.33
+      "vendas": 60,
+      "acess": 9928.33
     },
     "gaby": {
-      "vendas": 57,
-      "acess": 5265.52
+      "vendas": 59,
+      "acess": 5595.52
     },
     "rayssa": {
-      "vendas": 45,
+      "vendas": 53,
       "acess": 3223.0
     }
   },
