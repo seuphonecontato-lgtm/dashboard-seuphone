@@ -1,8 +1,120 @@
 {
-  "_comment": "Estado da automação diária SeuPhone. Atualizado pelo scheduled task.",
-  "month": "2026-10",
-  "last_processed_date": "2026-10-31",
+  "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
+  "month": "2026-11",
+  "last_processed_date": "2026-11-04",
   "processed_order_ids": [
+    27308211294,
+    27307565848,
+    27307087064,
+    27306711462,
+    27305959608,
+    27305765855,
+    27305303886,
+    27296782691,
+    27296511521,
+    27295162964,
+    27294464231,
+    27294396384,
+    27293966426,
+    27291294311,
+    27304515257,
+    27303731383,
+    27296717903,
+    27295702714,
+    27294703844,
+    27293153006,
+    27308708033,
+    27308522281,
+    27307497675,
+    27296751353,
+    27295977578,
+    27295147125,
+    27294360715,
+    27294053958,
+    27293900460,
+    27307034780,
+    27306052569,
+    27303292756,
+    27295422870,
+    27266620037
+  ],
+  "base_manual": {
+    "dora": {
+      "vendas": 0,
+      "acess": 0.0
+    },
+    "mariah": {
+      "vendas": 0,
+      "acess": 0.0
+    },
+    "gaby": {
+      "vendas": 0,
+      "acess": 0.0
+    },
+    "rayssa": {
+      "vendas": 0,
+      "acess": 0.0
+    }
+  },
+  "accumulated_bling": {
+    "dora": {
+      "vendas": 12,
+      "acess": 740.0
+    },
+    "mariah": {
+      "vendas": 7,
+      "acess": 849.97
+    },
+    "gaby": {
+      "vendas": 7,
+      "acess": 710.0
+    },
+    "rayssa": {
+      "vendas": 5,
+      "acess": 0.0
+    }
+  },
+  "vendedor_ids": {
+    "dora": 15596144709,
+    "mariah": 15596843551,
+    "gaby": 15596411344,
+    "rayssa": 15596979230
+  },
+  "accessories_product_codes": [
+    "7899716",
+    "7908100",
+    "ACESS_",
+    "CASETRNASP"
+  ],
+  "accessories_keywords": [
+    "PELÍCULA",
+    "PELICULA",
+    "CAPA",
+    "CASE",
+    "CARREGADOR",
+    "CABO",
+    "FONTE",
+    "PELÍCULA HPRIME",
+    "GORILA",
+    "HPRIME",
+    "GSHIELD",
+    "KAIDI"
+  ],
+  "exclude_situacao_ids": [
+    6,
+    12
+  ],
+  "github": {
+    "repo": "seuphonecontato-lgtm/dashboard-seuphone",
+    "branch": "main",
+    "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
+  },
+  "pendentes_confirmacao": {
+    "numeros_pedido": [],
+    "_note": "Sem pendentes em novembro."
+  },
+  "regras_vendas": "Cada aparelho/produto Apple ou similar (iPhone, iPad, AirPods, Apple Watch, MacBook, Apple Pencil, POCO etc.) = 1 venda POR UNIDADE (quantidade). Acessorios (keywords) so entram em R$ de acessorios. Manutencao/servico/entrega/frete nao contam. Pedido so de acessorio nao conta venda. Itens R$0 (INDICACAO, INSTAGRAM, CLIENTE) nao contam. Troca/garantia: conta 1 venda se houve pagamento no pedido (aparelho vendido); pedido R$0/manutencao nao conta; sempre avisar trocas na mensagem final. ATRIBUICAO: a venda e os acessorios contam para o vendedor registrado no pedido do Bling (campo vendedor), mesmo que a observacao cite outra pessoa. Situacoes 6 e 12 nunca contam.",
+  "processed_order_ids_mes_anterior": [
     27236521817,
     27136836154,
     27230156161,
@@ -63,200 +175,44 @@
     27273538880,
     27180270181
   ],
-  "base_manual": {
-    "_note": "Conferido no Bling em 29/10 (01-25/10): cada aparelho = 1 venda; manutencao fora; trocas sem pagamento de diferenca fora (pedidos 17930, 17972, 17786). Acessorios = soma valor x quantidade.",
-    "dora": {
-      "vendas": 44,
-      "acess": 5150.0
-    },
-    "mariah": {
-      "vendas": 50,
-      "acess": 7994.79
-    },
-    "gaby": {
-      "vendas": 49,
-      "acess": 3930.0
-    },
-    "rayssa": {
-      "vendas": 38,
-      "acess": 2333.0
-    }
-  },
-  "accumulated_bling": {
-    "_note": "Bling 26-31/10, regra nova (aparelhos por unidade); atualizado 31/10 20h",
+  "totals_mes": {
     "dora": {
       "vendas": 12,
       "acess": 740.0
     },
     "mariah": {
-      "vendas": 13,
-      "acess": 2063.54
+      "vendas": 7,
+      "acess": 849.97
     },
     "gaby": {
-      "vendas": 13,
-      "acess": 1745.52
+      "vendas": 7,
+      "acess": 710.0
     },
     "rayssa": {
-      "vendas": 14,
-      "acess": 890.0
+      "vendas": 5,
+      "acess": 0.0
     }
   },
-  "totals_outubro": {
-    "_note": "Auditoria pedido a pedido 04/11 (Bling, Atendidos): aparelhos por unidade; MacBook e Apple Pencil contam (produtos Apple); trocas 17930/17972/17786 contam 1 venda; acess sem servicos de manutencao. Total loja 233.",
-    "dora": {
-      "vendas": 56,
-      "acess": 5890.0
-    },
-    "mariah": {
-      "vendas": 63,
-      "acess": 10058.33
-    },
-    "gaby": {
-      "vendas": 62,
-      "acess": 5675.52
-    },
-    "rayssa": {
-      "vendas": 52,
-      "acess": 3223.0
+  "historico_mensal": {
+    "2026-10": {
+      "vendas": {
+        "dora": 56,
+        "mariah": 63,
+        "gaby": 62,
+        "rayssa": 52
+      },
+      "acess": {
+        "dora": 5890.0,
+        "mariah": 10058.33,
+        "gaby": 5675.52,
+        "rayssa": 3223.0
+      },
+      "status": "fechado (auditoria 04/11)"
     }
   },
-  "vendedor_ids": {
-    "dora": 15596144709,
-    "mariah": 15596843551,
-    "gaby": 15596411344,
-    "rayssa": 15596979230
-  },
-  "accessories_product_codes": [
-    "7899716",
-    "7908100",
-    "ACESS_",
-    "CASETRNASP"
-  ],
-  "accessories_keywords": [
-    "PELÍCULA",
-    "PELICULA",
-    "CAPA",
-    "CASE",
-    "CARREGADOR",
-    "CABO",
-    "FONTE",
-    "PELÍCULA HPRIME",
-    "GORILA",
-    "HPRIME",
-    "GSHIELD",
-    "KAIDI"
-  ],
-  "exclude_situacao_ids": [
-    6,
-    12
-  ],
-  "github": {
-    "repo": "seuphonecontato-lgtm/dashboard-seuphone",
-    "branch": "main",
-    "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
-  },
-  "pendentes_confirmacao": {
-    "numeros_pedido": [],
-    "_note": "Carlos 04/11: 17786, 17930, 17972 contam como 1 venda cada; sem pendentes."
-  },
-  "regras_vendas": "Cada aparelho/produto (iPhone, iPad, AirPods, Apple Watch, POCO etc.) = 1 venda por unidade. Acessorios so entram em R$ de acessorios. Manutencao fora. Troca por defeito sem diferenca paga fora; duvidas: perguntar ao Carlos antes de subir. ATRIBUICAO: a venda (e os acessorios) sempre conta para o vendedor registrado no pedido do Bling (campo vendedor), mesmo que a observacao cite outra vendedora (regra do Carlos, 04/11).",
-  "novembro": {
-    "_note": "Estado de novembro PRONTO (dashboards ja publicados com Nov 01-04/11). Para a rotina diaria passar a usar novembro: copiar estes campos para a raiz e mudar month para 2026-11 (apos atualizar o prompt da rotina).",
-    "month": "2026-11",
-    "last_processed_date": "2026-11-04",
-    "base_manual": {
-      "dora": {
-        "vendas": 0,
-        "acess": 0.0
-      },
-      "mariah": {
-        "vendas": 0,
-        "acess": 0.0
-      },
-      "gaby": {
-        "vendas": 0,
-        "acess": 0.0
-      },
-      "rayssa": {
-        "vendas": 0,
-        "acess": 0.0
-      }
-    },
-    "accumulated_bling": {
-      "dora": {
-        "vendas": 12,
-        "acess": 740.0
-      },
-      "mariah": {
-        "vendas": 7,
-        "acess": 849.97
-      },
-      "gaby": {
-        "vendas": 7,
-        "acess": 710.0
-      },
-      "rayssa": {
-        "vendas": 5,
-        "acess": 0.0
-      }
-    },
-    "totals_novembro": {
-      "dora": {
-        "vendas": 12,
-        "acess": 740.0
-      },
-      "mariah": {
-        "vendas": 7,
-        "acess": 849.97
-      },
-      "gaby": {
-        "vendas": 7,
-        "acess": 710.0
-      },
-      "rayssa": {
-        "vendas": 5,
-        "acess": 0.0
-      }
-    },
-    "processed_order_ids": [
-      27308211294,
-      27307565848,
-      27307087064,
-      27306711462,
-      27305959608,
-      27305765855,
-      27305303886,
-      27296782691,
-      27296511521,
-      27295162964,
-      27294464231,
-      27294396384,
-      27293966426,
-      27291294311,
-      27304515257,
-      27303731383,
-      27296717903,
-      27295702714,
-      27294703844,
-      27293153006,
-      27308708033,
-      27308522281,
-      27307497675,
-      27296751353,
-      27295977578,
-      27295147125,
-      27294360715,
-      27294053958,
-      27293900460,
-      27307034780,
-      27306052569,
-      27303292756,
-      27295422870,
-      27266620037
-    ],
-    "pendentes_confirmacao": {
-      "numeros_pedido": [],
-      "_note": "Sem pendentes em novembro."
-    }
+  "acumulado_ano_meses_fechados": {
+    "jan_set": 2043,
+    "out": 233,
+    "total_jan_out": 2276
   }
 }
