@@ -85,38 +85,38 @@
   "accumulated_bling": {
     "_note": "Bling 26-31/10, regra nova (aparelhos por unidade); atualizado 31/10 20h",
     "dora": {
-      "vendas": 7,
-      "acess": 1000.0
+      "vendas": 12,
+      "acess": 740.0
     },
     "mariah": {
-      "vendas": 14,
-      "acess": 2263.54
+      "vendas": 12,
+      "acess": 2063.54
     },
     "gaby": {
-      "vendas": 11,
+      "vendas": 13,
       "acess": 1745.52
     },
     "rayssa": {
-      "vendas": 16,
+      "vendas": 14,
       "acess": 890.0
     }
   },
   "totals_outubro": {
-    "_note": "base_manual + accumulated_bling; acessorios conferidos com relatorio do Bling | 04/11: + pedido 17971 (Rayssa, 31/10) | 04/11: Carlos confirmou: trocas 17930 e 17972 (Dora, sem outra venda no nome) contam 1 venda cada (+260 acess no 17930); 17786 fora",
+    "_note": "Auditoria pedido a pedido 04/11 (Bling, Atendidos): aparelhos por unidade, MacBook conta (produto Apple), trocas 17930/17972/17786 contam 1 venda; Apple Pencil (17747) nao conta; acess sem servicos de manutencao. Total loja 232.",
     "dora": {
-      "vendas": 51,
-      "acess": 6150.0
+      "vendas": 56,
+      "acess": 5890.0
     },
     "mariah": {
-      "vendas": 64,
-      "acess": 10258.33
+      "vendas": 62,
+      "acess": 10058.33
     },
     "gaby": {
-      "vendas": 60,
+      "vendas": 62,
       "acess": 5675.52
     },
     "rayssa": {
-      "vendas": 54,
+      "vendas": 52,
       "acess": 3223.0
     }
   },
@@ -156,10 +156,8 @@
     "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
   },
   "pendentes_confirmacao": {
-    "_note": "17786 fica FORA (Carlos, 04/11). 17930 e 17972 CONTAM como 1 venda cada (ja somados em Dora/outubro).",
-    "numeros_pedido": [
-      17786
-    ]
+    "numeros_pedido": [],
+    "_note": "Carlos 04/11: 17786, 17930, 17972 contam como 1 venda cada; sem pendentes."
   },
   "regras_vendas": "Cada aparelho/produto (iPhone, iPad, AirPods, Apple Watch, POCO etc.) = 1 venda por unidade. Acessorios so entram em R$ de acessorios. Manutencao fora. Troca por defeito sem diferenca paga fora; duvidas: perguntar ao Carlos antes de subir. ATRIBUICAO: a venda (e os acessorios) sempre conta para o vendedor registrado no pedido do Bling (campo vendedor), mesmo que a observacao cite outra vendedora (regra do Carlos, 04/11).",
   "novembro": {
