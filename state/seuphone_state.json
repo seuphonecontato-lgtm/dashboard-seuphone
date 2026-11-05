@@ -1,7 +1,7 @@
 {
   "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
-  "month": "2026-10",
-  "last_processed_date": "2026-11-04",
+  "month": "2026-11",
+  "last_processed_date": "2026-11-05",
   "processed_order_ids": [
     27308211294,
     27307565848,
@@ -36,7 +36,10 @@
     27306052569,
     27303292756,
     27295422870,
-    27266620037
+    27266620037,
+    27318313360,
+    27319218086,
+    27315627516
   ],
   "base_manual": {
     "dora": {
@@ -58,16 +61,16 @@
   },
   "accumulated_bling": {
     "dora": {
-      "vendas": 12,
+      "vendas": 13,
       "acess": 740.0
     },
     "mariah": {
       "vendas": 7,
-      "acess": 849.97
+      "acess": 1099.97
     },
     "gaby": {
       "vendas": 7,
-      "acess": 710.0
+      "acess": 830.0
     },
     "rayssa": {
       "vendas": 5,
@@ -177,16 +180,16 @@
   ],
   "totals_mes": {
     "dora": {
-      "vendas": 12,
+      "vendas": 13,
       "acess": 740.0
     },
     "mariah": {
       "vendas": 7,
-      "acess": 849.97
+      "acess": 1099.97
     },
     "gaby": {
       "vendas": 7,
-      "acess": 710.0
+      "acess": 830.0
     },
     "rayssa": {
       "vendas": 5,
@@ -214,7 +217,5 @@
     "jan_set": 2043,
     "out": 233,
     "total_jan_out": 2276
-  },
-  "month_pronto": "2026-11",
-  "_aviso_trava": "TRAVA PROVISORIA: month=2026-10 de proposito, para o prompt antigo da rotina (que so sabe outubro) nao corromper os dashboards. Os dados da raiz ja sao de NOVEMBRO e os HTML ja estao preparados (month_pronto=2026-11). O prompt novo (novo_prompt_rotina.txt) promove month_pronto -> month sozinho."
+  }
 }
