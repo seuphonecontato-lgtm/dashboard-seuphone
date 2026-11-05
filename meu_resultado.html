@@ -204,7 +204,7 @@
 <!-- ══════════════════ LOGIN ══════════════════ -->
 <div id="loginScreen">
   <div class="login-logo">SeuPhone</div>
-  <div class="login-sub">Meus Resultados · Outubro 2026</div>
+  <div class="login-sub">Meus Resultados · Novembro 2026</div>
 
   <div class="login-card">
     <div class="login-label">Quem é você?</div>
@@ -264,17 +264,17 @@
     <!-- KPI cards -->
     <div class="kpi-grid">
       <div class="kpi-card c-purple">
-        <div class="kpi-label">Vendas Out</div>
+        <div class="kpi-label">Vendas Nov</div>
         <div class="kpi-value" id="kVendas"></div>
         <div class="kpi-change" id="kVendasChg"></div>
       </div>
       <div class="kpi-card c-green">
-        <div class="kpi-label">Acessórios Out</div>
+        <div class="kpi-label">Acessórios Nov</div>
         <div class="kpi-value sm" id="kAcess"></div>
         <div class="kpi-change" id="kAcessChg"></div>
       </div>
       <div class="kpi-card c-blue">
-        <div class="kpi-label">Conv. Out</div>
+        <div class="kpi-label">Conv. Nov</div>
         <div class="kpi-value" id="kConv"></div>
         <div class="kpi-change" id="kConvChg"></div>
       </div>
@@ -300,7 +300,7 @@
 
     <!-- Trend chart -->
     <div class="chart-card">
-      <div class="chart-title">Vendas mensais — Jan a Out 2026</div>
+      <div class="chart-title">Vendas mensais — Jan a Nov 2026</div>
       <div class="chart-wrap">
         <canvas id="trendChart"></canvas>
       </div>
@@ -308,7 +308,7 @@
 
     <!-- Metrics vs last month -->
     <div class="metrics-card">
-      <div class="metrics-title">Outubro vs Setembro — parcial Out (23 d.u.) · Set completo (26 d.u.)</div>
+      <div class="metrics-title">Novembro vs Outubro — parcial Nov (2 d.u. de 24) · Out completo (26 d.u.)</div>
       <div class="metric-row">
         <div class="metric-name">Mensagens recebidas</div>
         <div class="metric-vals">
@@ -341,7 +341,7 @@
 
     <!-- Evolução semanal -->
     <div class="chart-card" id="weekCard">
-      <div class="chart-title">📅 Evolução Semanal — Outubro 2026</div>
+      <div class="chart-title">📅 Evolução Semanal — Novembro 2026</div>
       <div class="chart-wrap">
         <canvas id="weekChart"></canvas>
       </div>
@@ -354,7 +354,7 @@
     </div>
   </div>
 
-  <div class="footer">SeuPhone · Dados de Outubro 2026 (parcial · 01–28/10) · Atualizado em 28/10/2026</div>
+  <div class="footer">SeuPhone · Dados de Novembro 2026 (parcial · 01–04/11) · Atualizado em 04/11/2026</div>
 </div>
 
 <script>
@@ -365,23 +365,23 @@ const SELLERS = {
     name: 'Dora Tielly',
     initials: 'DT',
     avatarClass: 'av-green',
-    rank: 4,
-    rankEmoji: '4°',
-    rankText: '4º lugar em Outubro (parcial)',
-    rankBannerClass: 'bronze',
-    rankSub: 'Outubro parcial (até 31/out) · 49v · Set 2° (87v) 🥈',
+    rank: 1,
+    rankEmoji: '🥇',
+    rankText: '1º lugar em Novembro (parcial)',
+    rankBannerClass: 'gold',
+    rankSub: 'Novembro parcial (até 04/nov) · 12v · Out 4° (49v)',
 
     jun: {
-      vendas: 49, msgs: 339, conv: 12.98,
-      acess: 5890, ticket: 120.20,
-      perf: 49.0
+      vendas: 12, msgs: null, conv: null,
+      acess: 740.0, ticket: 61.67,
+      perf: 12.0
     },
     mai: {
-      vendas: 87, msgs: 860, conv: 10.1,
-      acess: 7629.91, ticket: 87.70
+      vendas: 49, msgs: 339, conv: 12.98,
+      acess: 5890, ticket: 120.2
     },
-    history: [71, 93, 89, 109, 102, 79, 93, 85, 87, 49],
-    weeks:   { labels: [["Sem 1","01–04 Out"],["Sem 2","05–11 Out"],["Sem 3","12–17 Out"],["Sem 4","18–24 Out"],["Sem 5","25–31 Out"]], vendas: [5, 10, 11, 18, 5] }
+    history: [71, 93, 89, 109, 102, 79, 93, 85, 87, 49, 12],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [12] }
   },
 
   mariah: {
@@ -389,23 +389,23 @@ const SELLERS = {
     name: 'Mariah',
     initials: 'MA',
     avatarClass: 'av-orange',
-    rank: 1,
-    rankEmoji: '🥇',
-    rankText: '1º lugar em Outubro (parcial)',
-    rankBannerClass: 'gold',
-    rankSub: 'Outubro parcial (até 31/out) · 64v · Set 1° (88v) 🥇',
+    rank: 2,
+    rankEmoji: '🥈',
+    rankText: '2º lugar em Novembro (parcial)',
+    rankBannerClass: 'silver',
+    rankSub: 'Novembro parcial (até 04/nov) · 7v · Out 1° (64v) 🥇',
 
     jun: {
-      vendas: 64, msgs: 326, conv: 15.03,
-      acess: 10258.33, ticket: 160.29,
-      perf: 64.0
+      vendas: 7, msgs: null, conv: null,
+      acess: 849.97, ticket: 121.42,
+      perf: 7.0
     },
     mai: {
-      vendas: 88, msgs: 751, conv: 11.7,
-      acess: 10211.17, ticket: 116.04
+      vendas: 64, msgs: 326, conv: 15.03,
+      acess: 10258.33, ticket: 160.29
     },
-    history: [17, 67, 66, 83, 101, 77, 58, 85, 88, 64],
-    weeks:   { labels: [["Sem 1","01–04 Out"],["Sem 2","05–11 Out"],["Sem 3","12–17 Out"],["Sem 4","18–24 Out"],["Sem 5","25–31 Out"]], vendas: [6, 14, 13, 17, 14] }
+    history: [17, 67, 66, 83, 101, 77, 58, 85, 88, 64, 7],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [7] }
   },
 
   gaby: {
@@ -413,23 +413,23 @@ const SELLERS = {
     name: 'Gaby',
     initials: 'GA',
     avatarClass: 'av-pink',
-    rank: 2,
-    rankEmoji: '🥈',
-    rankText: '2º lugar em Outubro (parcial)',
-    rankBannerClass: 'silver',
-    rankSub: 'Outubro parcial (até 31/out) · 60v · Voando na volta! 🎉',
+    rank: 3,
+    rankEmoji: '🥉',
+    rankText: '3º lugar em Novembro (parcial)',
+    rankBannerClass: 'bronze',
+    rankSub: 'Novembro parcial (até 04/nov) · 7v · Out 2° (60v) 🥈',
 
     jun: {
-      vendas: 60, msgs: 382, conv: 12.57,
-      acess: 5675.52, ticket: 94.59,
-      perf: 60.0
+      vendas: 7, msgs: null, conv: null,
+      acess: 710.0, ticket: 101.43,
+      perf: 7.0
     },
     mai: {
-      vendas: 59, msgs: 458, conv: 12.9,
-      acess: 3590, ticket: 60.85
+      vendas: 60, msgs: 382, conv: 12.57,
+      acess: 5675.52, ticket: 94.59
     },
-    history: [null, null, 63, 57, 72, 70, 70, 59, null, 60],
-    weeks:   { labels: [["Sem 1","01–04 Out"],["Sem 2","05–11 Out"],["Sem 3","12–17 Out"],["Sem 4","18–24 Out"],["Sem 5","25–31 Out"]], vendas: [5, 12, 19, 13, 11] }
+    history: [null, null, 63, 57, 72, 70, 70, 59, null, 60, 7],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [7] }
   },
 
   rayssa: {
@@ -437,23 +437,23 @@ const SELLERS = {
     name: 'Rayssa',
     initials: 'RA',
     avatarClass: 'av-violet',
-    rank: 3,
-    rankEmoji: '🥉',
-    rankText: '3º lugar em Outubro (parcial)',
+    rank: 4,
+    rankEmoji: '4°',
+    rankText: '4º lugar em Novembro (parcial)',
     rankBannerClass: 'bronze',
-    rankSub: 'Outubro parcial (até 31/out) · 53v · Excelente início! 🌟',
+    rankSub: 'Novembro parcial (até 04/nov) · 5v · Out 3° (54v) 🥉',
 
     jun: {
-      vendas: 53, msgs: 308, conv: 12.34,
-      acess: 3223, ticket: 60.81,
-      perf: 53.0
+      vendas: 5, msgs: null, conv: null,
+      acess: 0.0, ticket: 0.0,
+      perf: 5.0
     },
     mai: {
-      vendas: null, msgs: null, conv: null,
-      acess: null, ticket: null
+      vendas: 54, msgs: 308, conv: 12.34,
+      acess: 3223, ticket: 59.69
     },
-    history: [null, null, null, null, null, null, null, null, null, 53],
-    weeks:   { labels: [["Sem 1","01–04 Out"],["Sem 2","05–11 Out"],["Sem 3","12–17 Out"],["Sem 4","18–24 Out"],["Sem 5","25–31 Out"]], vendas: [8, 12, 8, 10, 15] }
+    history: [null, null, null, null, null, null, null, null, null, 54, 5],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [5] }
   }
 };
 
@@ -526,7 +526,7 @@ function generateTips(j) {
   // Tip 1: Performance
   if (j.perf >= 100) {
     tips.push({ icon:'🏆', tag:'META BATIDA', tagColor:'#34d399', bgColor:'rgba(52,211,153,0.08)',
-      text:'Você bateu a meta! Continue o ritmo. Cada venda extra aumenta seu histórico e cria uma base forte para novembro.' });
+      text:'Você bateu a meta! Continue o ritmo. Cada venda extra aumenta seu histórico e cria uma base forte para dezembro.' });
   } else if (j.perf >= 90) {
     tips.push({ icon:'🎯', tag:'QUASE LÁ', tagColor:'#fbbf24', bgColor:'rgba(251,191,36,0.08)',
       text:'Faltam apenas ' + gap + ' vendas para bater a meta! Um esforço final nessa semana garante 100% — responda todas as mensagens pendentes hoje.' });
@@ -551,7 +551,10 @@ function generateTips(j) {
   }
 
   // Tip 3: Taxa de conversão
-  if (j.conv < 13) {
+  if (j.conv == null) {
+    tips.push({ icon:'💬', tag:'RESPONDA RÁPIDO', tagColor:'#60a5fa', bgColor:'rgba(96,165,250,0.08)',
+      text:'A taxa de conversão de novembro ainda não foi apurada. Enquanto isso, responda cada mensagem nas primeiras horas — clientes atendidos rápido fecham com muito mais frequência.' });
+  } else if (j.conv < 13) {
     tips.push({ icon:'💬', tag:'MELHORE A CONVERSÃO', tagColor:'#f87171', bgColor:'rgba(248,113,113,0.08)',
       text:'Com ' + j.conv.toFixed(1).replace('.',',') + '% de conversão há espaço para crescer. Tente responder cada mensagem nas primeiras horas do dia — clientes atendidos rápido fecham com muito mais frequência.' });
   } else if (j.conv >= 20) {
@@ -587,7 +590,7 @@ function showDashboard(key) {
   av.className = 'db-avatar ' + s.avatarClass;
   av.textContent = s.initials;
   document.getElementById('dbName').textContent   = s.name;
-  document.getElementById('dbPeriod').textContent = 'Outubro 2026 · Vendas e acessórios até 31/10 · mensagens e conversão até 24/10';
+  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 04/11 · mensagens e conversão ainda sem dados';
 
   // Ranking banner
   const rb = document.getElementById('rankBanner');
@@ -600,22 +603,22 @@ function showDashboard(key) {
   document.getElementById('kVendas').textContent    = j.vendas;
   const hasPrev = m.vendas !== null;
   const kVChg = document.getElementById('kVendasChg');
-  if (hasPrev) { kVChg.textContent = pct(j.vendas, m.vendas) + ' vs Set'; kVChg.className = 'kpi-change ' + chgClass(j.vendas, m.vendas); }
+  if (hasPrev) { kVChg.textContent = pct(j.vendas, m.vendas) + ' vs Out'; kVChg.className = 'kpi-change ' + chgClass(j.vendas, m.vendas); }
   else { kVChg.textContent = 'Nova integrante'; kVChg.className = 'kpi-change up'; }
 
   document.getElementById('kAcess').textContent = brl(j.acess);
   const kAChg = document.getElementById('kAcessChg');
-  if (hasPrev) { kAChg.textContent = pct(j.acess, m.acess) + ' vs Set'; kAChg.className = 'kpi-change ' + chgClass(j.acess, m.acess); }
+  if (hasPrev) { kAChg.textContent = pct(j.acess, m.acess) + ' vs Out'; kAChg.className = 'kpi-change ' + chgClass(j.acess, m.acess); }
   else { kAChg.textContent = '—'; kAChg.className = 'kpi-change'; }
 
-  document.getElementById('kConv').textContent = j.conv.toFixed(1).replace('.',',') + '%';
+  document.getElementById('kConv').textContent = j.conv == null ? '—' : j.conv.toFixed(1).replace('.',',') + '%';
   const kCChg = document.getElementById('kConvChg');
-  if (hasPrev) { kCChg.textContent = pp(j.conv, m.conv) + ' vs Set'; kCChg.className = 'kpi-change ' + chgClass(j.conv, m.conv); }
+  if (hasPrev && j.conv != null) { kCChg.textContent = pp(j.conv, m.conv) + ' vs Out'; kCChg.className = 'kpi-change ' + chgClass(j.conv, m.conv); }
   else { kCChg.textContent = '—'; kCChg.className = 'kpi-change'; }
 
   document.getElementById('kTicket').textContent = brl(j.ticket);
   const kTChg = document.getElementById('kTicketChg');
-  if (hasPrev) { kTChg.textContent = pct(j.ticket, m.ticket) + ' vs Set'; kTChg.className = 'kpi-change ' + chgClass(j.ticket, m.ticket); }
+  if (hasPrev) { kTChg.textContent = pct(j.ticket, m.ticket) + ' vs Out'; kTChg.className = 'kpi-change ' + chgClass(j.ticket, m.ticket); }
   else { kTChg.textContent = '—'; kTChg.className = 'kpi-change'; }
 
   // Performance bar
@@ -631,17 +634,17 @@ function showDashboard(key) {
   perfPctEl.textContent = j.perf.toFixed(1).replace('.',',') + '%';
   perfPctEl.style.color = j.perf >= 100 ? '#34d399' : j.perf >= 80 ? '#fbbf24' : '#f87171';
   document.getElementById('perfDetail').textContent = j.vendas + ' aparelhos vendidos · meta do mês: 100 aparelhos';
-  document.getElementById('perfDu').textContent     = 'Vendas e acessórios conferidos no Bling de 01/10 a 31/10';
+  document.getElementById('perfDu').textContent     = 'Vendas e acessórios conferidos no Bling de 01/11 a 04/11';
 
   // Metrics table
-  document.getElementById('mMsgs').textContent      = j.msgs + ' msgs';
-  document.getElementById('mMsgsPrev').textContent  = hasPrev ? 'Set: ' + m.msgs + ' msgs · ' + pct(j.msgs, m.msgs) : 'Nova integrante — sem histórico anterior';
-  document.getElementById('mConv').textContent      = j.conv.toFixed(1).replace('.',',') + '%';
-  document.getElementById('mConvPrev').textContent  = hasPrev ? 'Set: ' + m.conv.toFixed(1).replace('.',',') + '% · ' + pp(j.conv, m.conv) : 'Nova integrante — sem histórico anterior';
+  document.getElementById('mMsgs').textContent      = j.msgs == null ? '—' : j.msgs + ' msgs';
+  document.getElementById('mMsgsPrev').textContent  = hasPrev ? 'Out: ' + m.msgs + ' msgs' + (j.msgs == null ? ' · sem dados de Nov ainda' : ' · ' + pct(j.msgs, m.msgs)) : 'Nova integrante — sem histórico anterior';
+  document.getElementById('mConv').textContent      = j.conv == null ? '—' : j.conv.toFixed(1).replace('.',',') + '%';
+  document.getElementById('mConvPrev').textContent  = hasPrev ? 'Out: ' + m.conv.toFixed(1).replace('.',',') + '%' + (j.conv == null ? ' · sem dados de Nov ainda' : ' · ' + pp(j.conv, m.conv)) : 'Nova integrante — sem histórico anterior';
   document.getElementById('mAcess').textContent     = brl(j.acess);
-  document.getElementById('mAcessPrev').textContent = hasPrev ? 'Set: ' + brl(m.acess) + ' · ' + pct(j.acess, m.acess) : 'Nova integrante — sem histórico anterior';
+  document.getElementById('mAcessPrev').textContent = hasPrev ? 'Out: ' + brl(m.acess) + ' · ' + pct(j.acess, m.acess) : 'Nova integrante — sem histórico anterior';
   document.getElementById('mTicket').textContent    = brl(j.ticket);
-  document.getElementById('mTicketPrev').textContent= hasPrev ? 'Set: ' + brl(m.ticket) + ' · ' + pct(j.ticket, m.ticket) : 'Nova integrante — sem histórico anterior';
+  document.getElementById('mTicketPrev').textContent= hasPrev ? 'Out: ' + brl(m.ticket) + ' · ' + pct(j.ticket, m.ticket) : 'Nova integrante — sem histórico anterior';
 
   // Trend chart
   if (trendChartInstance) trendChartInstance.destroy();
@@ -652,7 +655,7 @@ function showDashboard(key) {
   trendChartInstance = new Chart(ctx, {
     type: 'line',
     data: {
-      labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
+      labels: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov'],
       datasets: [{
         data: s.history,
         borderColor: borderClr,
