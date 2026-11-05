@@ -85,8 +85,8 @@
   "accumulated_bling": {
     "_note": "Bling 26-31/10, regra nova (aparelhos por unidade); atualizado 31/10 20h",
     "dora": {
-      "vendas": 5,
-      "acess": 740.0
+      "vendas": 7,
+      "acess": 1000.0
     },
     "mariah": {
       "vendas": 14,
@@ -102,10 +102,10 @@
     }
   },
   "totals_outubro": {
-    "_note": "base_manual + accumulated_bling; acessorios conferidos com relatorio do Bling | 04/11: + pedido 17971 (Rayssa, 31/10)",
+    "_note": "base_manual + accumulated_bling; acessorios conferidos com relatorio do Bling | 04/11: + pedido 17971 (Rayssa, 31/10) | 04/11: Carlos confirmou: trocas 17930 e 17972 (Dora, sem outra venda no nome) contam 1 venda cada (+260 acess no 17930); 17786 fora",
     "dora": {
-      "vendas": 49,
-      "acess": 5890.0
+      "vendas": 51,
+      "acess": 6150.0
     },
     "mariah": {
       "vendas": 64,
@@ -156,10 +156,8 @@
     "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
   },
   "pendentes_confirmacao": {
-    "_note": "Pedidos de troca aguardando decisao do Carlos; ficam fora do dashboard ate confirmar. Pedido 17980 (Dora) conta como venda (cliente pagou diferenca).",
+    "_note": "17786 fica FORA (Carlos, 04/11). 17930 e 17972 CONTAM como 1 venda cada (ja somados em Dora/outubro).",
     "numeros_pedido": [
-      17930,
-      17972,
       17786
     ]
   },
@@ -259,12 +257,8 @@
       27266620037
     ],
     "pendentes_confirmacao": {
-      "numeros_pedido": [
-        17930,
-        17972,
-        17786
-      ],
-      "_note": "Outubro: seguem FORA. 17786 nao conta; 17972 e 17930 dependem de existir outra venda no nome do cliente no mes (nenhuma encontrada no Bling) - aguardando confirmacao do Carlos."
+      "numeros_pedido": [],
+      "_note": "Sem pendentes em novembro."
     }
   }
 }
