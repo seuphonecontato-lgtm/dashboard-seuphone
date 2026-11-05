@@ -89,7 +89,7 @@
       "acess": 740.0
     },
     "mariah": {
-      "vendas": 12,
+      "vendas": 13,
       "acess": 2063.54
     },
     "gaby": {
@@ -102,13 +102,13 @@
     }
   },
   "totals_outubro": {
-    "_note": "Auditoria pedido a pedido 04/11 (Bling, Atendidos): aparelhos por unidade, MacBook conta (produto Apple), trocas 17930/17972/17786 contam 1 venda; Apple Pencil (17747) nao conta; acess sem servicos de manutencao. Total loja 232.",
+    "_note": "Auditoria pedido a pedido 04/11 (Bling, Atendidos): aparelhos por unidade; MacBook e Apple Pencil contam (produtos Apple); trocas 17930/17972/17786 contam 1 venda; acess sem servicos de manutencao. Total loja 233.",
     "dora": {
       "vendas": 56,
       "acess": 5890.0
     },
     "mariah": {
-      "vendas": 62,
+      "vendas": 63,
       "acess": 10058.33
     },
     "gaby": {
