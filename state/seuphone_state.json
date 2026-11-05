@@ -1,6 +1,6 @@
 {
   "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
-  "month": "2026-11",
+  "month": "2026-10",
   "last_processed_date": "2026-11-04",
   "processed_order_ids": [
     27308211294,
@@ -214,5 +214,7 @@
     "jan_set": 2043,
     "out": 233,
     "total_jan_out": 2276
-  }
+  },
+  "month_pronto": "2026-11",
+  "_aviso_trava": "TRAVA PROVISORIA: month=2026-10 de proposito, para o prompt antigo da rotina (que so sabe outubro) nao corromper os dashboards. Os dados da raiz ja sao de NOVEMBRO e os HTML ja estao preparados (month_pronto=2026-11). O prompt novo (novo_prompt_rotina.txt) promove month_pronto -> month sozinho."
 }
