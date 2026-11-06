@@ -197,6 +197,124 @@
     }
     .dica-text { font-size:0.82rem; color:#94a3b8; line-height:1.5; }
     .footer { text-align:center; font-size:0.7rem; color:#374151; padding:20px 16px; }
+
+    /* ── Calculadora de Troca ───────────────────────────────── */
+    .calc-toggle-btn {
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      width:100%; padding:14px; margin-bottom:16px;
+      background:#1a1f2e; border:1px solid #2d3748; border-radius:14px;
+      color:#60a5fa; font-size:0.88rem; font-weight:600; cursor:pointer;
+      transition: background .15s;
+    }
+    .calc-toggle-btn:hover { background:#1e2a40; }
+    .calc-toggle-btn .arrow { transition:transform .2s; }
+    .calc-toggle-btn.open .arrow { transform:rotate(180deg); }
+    #calcSection { display:none; margin-bottom:16px; }
+    .calc-card {
+      background:#1a1f2e; border:1px solid #2d3748; border-radius:14px;
+      padding:14px 16px; margin-bottom:10px;
+    }
+    .calc-card-label { font-size:0.72rem; color:#64748b; text-transform:uppercase;
+      letter-spacing:.05em; margin-bottom:10px; }
+    .calc-planos { display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+    .calc-plano-btn {
+      padding:9px 4px; font-size:0.8rem; border-radius:10px;
+      border:1px solid #2d3748; background:transparent; color:#94a3b8; cursor:pointer;
+    }
+    .calc-plano-btn.active {
+      border:2px solid #60a5fa; background:rgba(96,165,250,.12);
+      color:#60a5fa; font-weight:700;
+    }
+    .calc-input-row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:10px; }
+    .calc-input-card {
+      background:#1a1f2e; border:1px solid #2d3748; border-radius:12px; padding:11px 13px;
+    }
+    .calc-input-card label { display:block; font-size:0.7rem; color:#64748b; margin-bottom:5px; }
+    .calc-input-wrap { display:flex; align-items:center; gap:3px; }
+    .calc-input-wrap span { font-size:0.8rem; color:#64748b; }
+    .calc-input-wrap input {
+      width:100%; font-size:1rem; font-weight:700;
+      border:none; background:transparent; color:#f1f5f9; outline:none;
+    }
+    .calc-tabela-ajust {
+      background:rgba(96,165,250,.07); border:1px solid rgba(96,165,250,.2);
+      border-radius:10px; padding:8px 12px; margin-bottom:10px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .calc-tabela-ajust .lbl { font-size:0.72rem; color:#64748b; }
+    .calc-tabela-ajust .val { font-size:0.9rem; font-weight:700; color:#60a5fa; }
+    .calc-row { display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:6px; }
+    .calc-row:last-child { margin-bottom:0; }
+    .calc-row .lbl { color:#64748b; }
+    .calc-row .val { font-weight:500; color:#f1f5f9; }
+    .calc-divider { border:none; border-top:1px solid #1e2533; margin:9px 0; }
+    .calc-row.dest .lbl { color:#34d399; font-weight:600; }
+    .calc-row.dest .val { color:#34d399; font-weight:700; font-size:0.92rem; }
+    .calc-obs-row { display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-bottom:10px; }
+    .calc-obs-input {
+      background:#1a1f2e; border:1px solid #2d3748; border-radius:10px;
+      padding:9px 12px; font-size:0.82rem; color:#f1f5f9; outline:none; width:100%;
+    }
+    .calc-obs-input::placeholder { color:#374151; }
+    .calc-slider-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:7px; }
+    .calc-slider-row .lbl { font-size:0.78rem; color:#64748b; }
+    .calc-slider-row .bval { font-size:0.85rem; font-weight:700; color:#60a5fa; }
+    input.calc-range { width:100%; accent-color:#60a5fa; height:4px; }
+    .calc-slider-hints { display:flex; justify-content:space-between; font-size:0.68rem; color:#374151; margin-top:5px; }
+    .calc-proposta {
+      background:rgba(96,165,250,.08); border:1px solid rgba(96,165,250,.25);
+      border-radius:12px; padding:13px 15px; margin-bottom:10px;
+    }
+    .calc-proposta .titulo { font-size:0.72rem; color:#60a5fa; font-weight:700; margin-bottom:9px; }
+    .calc-comissao-box {
+      background:#1a1f2e; border:2px solid #60a5fa; border-radius:12px;
+      padding:13px 15px; display:flex; align-items:center; justify-content:space-between;
+      margin-bottom:10px;
+    }
+    .calc-comissao-box .titulo { font-size:0.82rem; font-weight:700; color:#f1f5f9; }
+    .calc-comissao-box .sub { font-size:0.68rem; color:#374151; margin-top:3px; }
+    .calc-comissao-box .valor { font-size:1.5rem; font-weight:800; color:#60a5fa; }
+    .calc-pct-wrap { display:flex; align-items:center; gap:5px; }
+    .calc-pct-input {
+      width:50px; font-size:1.1rem; font-weight:700;
+      border:1px solid #2d3748; border-radius:8px; padding:5px 7px;
+      background:#2d3748; color:#f1f5f9; text-align:center; outline:none;
+    }
+    .calc-btn-reg {
+      display:block; width:100%; padding:14px; border-radius:14px; border:none;
+      background:#34d399; color:#0f172a; font-size:0.9rem; font-weight:800;
+      cursor:pointer; margin-bottom:10px;
+    }
+    .calc-acum {
+      background:#1a1f2e; border:1px solid #2d3748; border-radius:12px;
+      padding:12px 15px; margin-bottom:10px;
+    }
+    .calc-acum-title { font-size:0.72rem; color:#64748b; text-transform:uppercase;
+      letter-spacing:.05em; margin-bottom:10px; }
+    .calc-acum-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+    .calc-acum-item { text-align:center; }
+    .calc-acum-item .av { font-size:1.1rem; font-weight:800; color:#60a5fa; }
+    .calc-acum-item .ak { font-size:0.68rem; color:#64748b; margin-top:2px; }
+    .calc-hist-title { font-size:0.72rem; color:#64748b; text-transform:uppercase;
+      letter-spacing:.05em; margin-bottom:10px; }
+    .calc-neg-item { padding:10px 0; border-bottom:1px solid #1e2533; }
+    .calc-neg-item:last-child { border-bottom:none; }
+    .calc-neg-header { display:flex; justify-content:space-between; margin-bottom:3px; }
+    .calc-neg-cliente { font-size:0.85rem; font-weight:600; color:#f1f5f9; }
+    .calc-neg-hora { font-size:0.72rem; color:#64748b; }
+    .calc-neg-modelo { font-size:0.72rem; color:#94a3b8; margin-bottom:5px; }
+    .calc-neg-tags { display:flex; flex-wrap:wrap; gap:5px; }
+    .calc-neg-tag {
+      font-size:0.68rem; padding:2px 7px; border-radius:20px;
+      background:rgba(100,116,139,.15); color:#94a3b8; border:1px solid #2d3748;
+    }
+    .calc-neg-tag.green { background:rgba(52,211,153,.1); color:#34d399; border-color:rgba(52,211,153,.3); }
+    .calc-neg-tag.blue  { background:rgba(96,165,250,.1); color:#60a5fa; border-color:rgba(96,165,250,.3); }
+    .calc-empty { font-size:0.8rem; color:#374151; text-align:center; padding:16px 0; }
+    .calc-limpar-btn {
+      float:right; font-size:0.68rem; color:#ef4444; background:none; border:none;
+      cursor:pointer; padding:0; margin-top:-2px;
+    }
   </style>
 </head>
 <body>
@@ -353,6 +471,135 @@
       <div id="dicasContainer"></div>
     </div>
   </div>
+
+
+  <!-- ══════════ CALCULADORA DE TROCA ══════════ -->
+  <div class="container">
+    <button class="calc-toggle-btn" id="calcToggleBtn" onclick="toggleCalc()">
+      🔄 Calculadora de Troca
+      <span class="arrow">▼</span>
+    </button>
+
+    <div id="calcSection">
+      <!-- Plano -->
+      <div class="calc-card">
+        <p class="calc-card-label">Plano de parcelamento</p>
+        <div class="calc-planos">
+          <button class="calc-plano-btn active" onclick="cSetPlano(this,'12x',12.55,1.00)">12x — 12,55%</button>
+          <button class="calc-plano-btn" onclick="cSetPlano(this,'18x',16.83,1.06)">18x — 16,83%</button>
+          <button class="calc-plano-btn" onclick="cSetPlano(this,'21x',18.00,1.09)">21x — 18,00%</button>
+          <button class="calc-plano-btn" onclick="cSetPlano(this,'PIX',1.50,1.00)">PIX maq. — 1,50%</button>
+        </div>
+      </div>
+
+      <!-- Valores -->
+      <div class="calc-input-row">
+        <div class="calc-input-card">
+          <label>Aparelho novo (tabela 12x)</label>
+          <div class="calc-input-wrap"><span>R$</span>
+            <input type="number" id="cNovo" value="" inputmode="numeric" placeholder="0" oninput="cCalc()">
+          </div>
+        </div>
+        <div class="calc-input-card">
+          <label>Troca proposta</label>
+          <div class="calc-input-wrap"><span>R$</span>
+            <input type="number" id="cTroca" value="" inputmode="numeric" placeholder="0" oninput="cCalc()">
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabela ajustada -->
+      <div id="cTabelaWrap" style="display:none;">
+        <div class="calc-tabela-ajust">
+          <span class="lbl" id="cTabelaLabel">Tabela em 18x (+6%)</span>
+          <span class="val" id="cTabelaVal">R$ 0</span>
+        </div>
+      </div>
+
+      <!-- Resultado base -->
+      <div class="calc-card">
+        <p class="calc-card-label">Resultado sem bonificação</p>
+        <div class="calc-row"><span class="lbl">Na maquininha</span><span class="val" id="cRMaq">R$ 0</span></div>
+        <div class="calc-row"><span class="lbl">Taxa sobre valor cheio</span><span class="val" id="cRTaxaCheio" style="color:#64748b">−R$ 0</span></div>
+        <div class="calc-row"><span class="lbl">Taxa sobre maquininha</span><span class="val" id="cRTaxaMaq" style="color:#64748b">−R$ 0</span></div>
+        <hr class="calc-divider">
+        <div class="calc-row dest"><span class="lbl">Margem disponível</span><span class="val" id="cRMargem">R$ 0</span></div>
+      </div>
+
+      <!-- Comissão % config -->
+      <div class="calc-card" style="display:flex;align-items:center;justify-content:space-between;">
+        <div>
+          <p class="calc-card-label" style="margin:0">Comissão do vendedor</p>
+          <p style="font-size:0.68rem;color:#374151;margin-top:2px">% sobre a margem retida</p>
+        </div>
+        <div class="calc-pct-wrap">
+          <input type="number" class="calc-pct-input" id="cPct" value="5" min="0" max="100" inputmode="numeric" oninput="cCalcBonus()">
+          <span style="color:#64748b;font-size:0.9rem">%</span>
+        </div>
+      </div>
+
+      <!-- Slider bonificação -->
+      <div class="calc-card">
+        <div class="calc-slider-row">
+          <span class="lbl">Bonificação extra na troca</span>
+          <span class="bval" id="cBonusLabel">+R$ 0</span>
+        </div>
+        <input type="range" class="calc-range" id="cBonus" min="0" max="0" value="0" step="1" oninput="cCalcBonus()">
+        <div class="calc-slider-hints">
+          <span>Sem bonificar</span>
+          <span id="cMaxLabel">Máximo: R$ 0</span>
+        </div>
+      </div>
+
+      <!-- Observação -->
+      <div class="calc-obs-row">
+        <input type="text" class="calc-obs-input" id="cCliente" placeholder="Nome do cliente">
+        <input type="text" class="calc-obs-input" id="cModelo" placeholder="Modelo da troca">
+      </div>
+
+      <!-- Proposta final -->
+      <div class="calc-proposta">
+        <p class="titulo">PROPOSTA FINAL</p>
+        <div class="calc-row"><span class="lbl">Troca aceita</span><span class="val" id="cFTroca">R$ 0</span></div>
+        <div class="calc-row"><span class="lbl">Na maquininha</span><span class="val" id="cFMaq">R$ 0</span></div>
+        <div class="calc-row"><span class="lbl" id="cFParcelaLabel">Parcela (12x)</span><span class="val" id="cFParcela">R$ 0,00</span></div>
+        <hr class="calc-divider">
+        <div class="calc-row"><span class="lbl">Margem retida</span><span class="val" id="cFMargemRest" style="color:#34d399">R$ 0</span></div>
+      </div>
+
+      <!-- Comissão destaque -->
+      <div class="calc-comissao-box">
+        <div>
+          <p class="titulo">Comissão</p>
+          <p class="sub" id="cComissaoDesc">5% × R$ 0 retidos</p>
+        </div>
+        <span class="valor" id="cFComissao">R$ 0,00</span>
+      </div>
+
+      <!-- Registrar -->
+      <button class="calc-btn-reg" id="cBtnReg" onclick="cRegistrar()">✓ Registrar negociação</button>
+
+      <!-- Acumulador -->
+      <div class="calc-acum">
+        <p class="calc-acum-title">Resumo do dia</p>
+        <div class="calc-acum-grid">
+          <div class="calc-acum-item"><div class="av" id="cAcumCount">0</div><div class="ak">negociações</div></div>
+          <div class="calc-acum-item"><div class="av" id="cAcumComissao">R$ 0,00</div><div class="ak">comissão total</div></div>
+          <div class="calc-acum-item"><div class="av" id="cAcumMargem">R$ 0</div><div class="ak">margem gerada</div></div>
+          <div class="calc-acum-item"><div class="av" id="cAcumRetida">R$ 0</div><div class="ak">margem retida</div></div>
+        </div>
+      </div>
+
+      <!-- Histórico -->
+      <div class="calc-card">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <p class="calc-hist-title" style="margin:0">Histórico do dia</p>
+          <button class="calc-limpar-btn" onclick="cLimparHist()">Limpar</button>
+        </div>
+        <div id="cListaHist"><p class="calc-empty">Nenhuma negociação registrada ainda</p></div>
+      </div>
+    </div><!-- /#calcSection -->
+  </div><!-- /.container -->
 
   <div class="footer">SeuPhone · Dados de Novembro 2026 (parcial · 01–05/11) · Atualizado em 05/11/2026</div>
 </div>
@@ -750,6 +997,164 @@ function showDashboard(key) {
   // Animar barra após render
   setTimeout(() => { pf.style.width = pct100 + '%'; }, 100);
 }
+
+// ═══════════════════════════════════════════════════
+//  CALCULADORA DE TROCA — integrada ao meu_resultado
+// ═══════════════════════════════════════════════════
+(function(){
+  let cPlano = {nome:'12x', taxa:12.55, mult:1.00};
+  let cHist  = [];
+  const KEY_HIST = 'seuphone_hist_v2';
+  const KEY_DATA = 'seuphone_hist_data_v2';
+
+  function cFmt(v){ return 'R$ ' + Math.round(v).toLocaleString('pt-BR'); }
+  function cFmtDec(v){ return 'R$ ' + v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2}); }
+
+  function cLoadHist(){
+    const hoje = new Date().toDateString();
+    if (localStorage.getItem(KEY_DATA) !== hoje){
+      cHist = [];
+      localStorage.setItem(KEY_DATA, hoje);
+      localStorage.setItem(KEY_HIST, '[]');
+    } else {
+      try { cHist = JSON.parse(localStorage.getItem(KEY_HIST)||'[]'); } catch(e){ cHist=[]; }
+    }
+  }
+
+  window.toggleCalc = function(){
+    const sec = document.getElementById('calcSection');
+    const btn = document.getElementById('calcToggleBtn');
+    const open = sec.style.display === 'block';
+    sec.style.display = open ? 'none' : 'block';
+    btn.classList.toggle('open', !open);
+    if (!open){ cLoadHist(); cRenderHist(); cCalc(); }
+  };
+
+  window.cSetPlano = function(btn, nome, taxa, mult){
+    document.querySelectorAll('.calc-plano-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    cPlano = {nome, taxa, mult};
+    cCalc();
+  };
+
+  window.cCalc = function(){
+    const novo12 = parseFloat(document.getElementById('cNovo').value)||0;
+    const troca  = parseFloat(document.getElementById('cTroca').value)||0;
+    const taxa   = cPlano.taxa/100, mult = cPlano.mult, nome = cPlano.nome;
+    const novoReal = novo12 * mult;
+    const wrap = document.getElementById('cTabelaWrap');
+    if (mult !== 1.00 && nome !== 'PIX'){
+      wrap.style.display = 'block';
+      document.getElementById('cTabelaLabel').textContent = 'Tabela em '+nome+' ('+(mult===1.06?'+6%':'+9%')+')';
+      document.getElementById('cTabelaVal').textContent   = cFmt(novoReal);
+    } else { wrap.style.display = 'none'; }
+    const maq      = Math.max(0, novoReal - troca);
+    const taxaCheio = novoReal * taxa;
+    const taxaMaq   = maq * taxa;
+    const margem    = Math.max(0, taxaCheio - taxaMaq);
+    document.getElementById('cRMaq').textContent        = cFmt(maq);
+    document.getElementById('cRTaxaCheio').textContent  = '−'+cFmt(taxaCheio);
+    document.getElementById('cRTaxaMaq').textContent    = '−'+cFmt(taxaMaq);
+    document.getElementById('cRMargem').textContent     = cFmt(margem);
+    const sl = document.getElementById('cBonus');
+    sl.max = Math.floor(margem);
+    sl.value = Math.min(parseFloat(sl.value)||0, Math.floor(margem));
+    document.getElementById('cMaxLabel').textContent = 'Máximo: '+cFmt(margem);
+    cCalcBonus();
+  };
+
+  window.cCalcBonus = function(){
+    const novo12 = parseFloat(document.getElementById('cNovo').value)||0;
+    const troca  = parseFloat(document.getElementById('cTroca').value)||0;
+    const bonus  = parseInt(document.getElementById('cBonus').value)||0;
+    const pct    = parseFloat(document.getElementById('cPct').value)||0;
+    const taxa   = cPlano.taxa/100, mult = cPlano.mult, nome = cPlano.nome;
+    const novoReal    = novo12 * mult;
+    const margemTotal = Math.max(0, novoReal*taxa - Math.max(0,novoReal-troca)*taxa);
+    const trocaFinal  = troca + bonus;
+    const maqFinal    = Math.max(0, novoReal - trocaFinal);
+    const nP          = parseInt(nome)||1;
+    const margemRetida = Math.max(0, margemTotal - bonus);
+    const comissao    = margemRetida * (pct/100);
+    document.getElementById('cBonusLabel').textContent   = bonus>0 ? '+'+cFmt(bonus) : '+R$ 0';
+    document.getElementById('cFTroca').textContent       = cFmt(trocaFinal);
+    document.getElementById('cFMaq').textContent         = cFmt(maqFinal);
+    document.getElementById('cFParcelaLabel').textContent = 'Parcela ('+nome+')';
+    document.getElementById('cFParcela').textContent     = nome.includes('x') ? cFmtDec(maqFinal/nP) : cFmt(maqFinal);
+    const mrEl = document.getElementById('cFMargemRest');
+    mrEl.textContent = cFmt(margemRetida);
+    mrEl.style.color = margemRetida < 100 ? '#f59e0b' : '#34d399';
+    document.getElementById('cFComissao').textContent    = cFmtDec(comissao);
+    document.getElementById('cComissaoDesc').textContent = pct+'% × '+cFmt(margemRetida)+' retidos';
+  };
+
+  window.cRegistrar = function(){
+    const novo12       = parseFloat(document.getElementById('cNovo').value)||0;
+    const troca        = parseFloat(document.getElementById('cTroca').value)||0;
+    const bonus        = parseInt(document.getElementById('cBonus').value)||0;
+    const pct          = parseFloat(document.getElementById('cPct').value)||0;
+    const taxa         = cPlano.taxa/100, mult = cPlano.mult;
+    const novoReal     = novo12 * mult;
+    const margemTotal  = Math.max(0, novoReal*taxa - Math.max(0,novoReal-troca)*taxa);
+    const margemRetida = Math.max(0, margemTotal - bonus);
+    const comissao     = margemRetida * (pct/100);
+    const cliente      = document.getElementById('cCliente').value.trim() || 'Cliente';
+    const modelo       = document.getElementById('cModelo').value.trim() || '—';
+    const hora         = new Date().toLocaleTimeString('pt-BR',{hour:'2-digit',minute:'2-digit'});
+    cHist.unshift({cliente, modelo, hora, plano:cPlano.nome,
+      trocaAceita:troca+bonus, margemTotal:Math.round(margemTotal),
+      margemRetida:Math.round(margemRetida), comissao});
+    localStorage.setItem(KEY_HIST, JSON.stringify(cHist));
+    cRenderHist();
+    document.getElementById('cCliente').value = '';
+    document.getElementById('cModelo').value  = '';
+    document.getElementById('cBonus').value   = 0;
+    cCalcBonus();
+    const btn = document.getElementById('cBtnReg');
+    btn.textContent = '✓ Registrado!'; btn.style.background='#60a5fa';
+    setTimeout(()=>{ btn.textContent='✓ Registrar negociação'; btn.style.background='#34d399'; },1500);
+  };
+
+  window.cLimparHist = function(){
+    if (!confirm('Limpar histórico do dia?')) return;
+    cHist = [];
+    localStorage.setItem(KEY_HIST, '[]');
+    cRenderHist();
+  };
+
+  window.cRenderHist = function(){
+    const lista = document.getElementById('cListaHist');
+    if (!lista) return;
+    if (cHist.length === 0){
+      lista.innerHTML = '<p class="calc-empty">Nenhuma negociação registrada ainda</p>';
+      document.getElementById('cAcumCount').textContent    = '0';
+      document.getElementById('cAcumComissao').textContent = 'R$ 0,00';
+      document.getElementById('cAcumMargem').textContent   = 'R$ 0';
+      document.getElementById('cAcumRetida').textContent   = 'R$ 0';
+      return;
+    }
+    let tc=0, tm=0, tr=0;
+    cHist.forEach(n=>{ tc+=n.comissao; tm+=n.margemTotal; tr+=n.margemRetida; });
+    document.getElementById('cAcumCount').textContent    = cHist.length;
+    document.getElementById('cAcumComissao').textContent = cFmtDec(tc);
+    document.getElementById('cAcumMargem').textContent   = cFmt(tm);
+    document.getElementById('cAcumRetida').textContent   = cFmt(tr);
+    lista.innerHTML = cHist.map(n=>`
+      <div class="calc-neg-item">
+        <div class="calc-neg-header">
+          <span class="calc-neg-cliente">${n.cliente}</span>
+          <span class="calc-neg-hora">${n.hora}</span>
+        </div>
+        <div class="calc-neg-modelo">${n.modelo} → ${n.plano}</div>
+        <div class="calc-neg-tags">
+          <span class="calc-neg-tag">Troca: ${cFmt(n.trocaAceita)}</span>
+          <span class="calc-neg-tag green">Margem: ${cFmt(n.margemTotal)}</span>
+          <span class="calc-neg-tag blue">Comissão: ${cFmtDec(n.comissao)}</span>
+        </div>
+      </div>`).join('');
+  };
+})();
+
 </script>
 </body>
 </html>
