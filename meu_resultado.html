@@ -448,7 +448,7 @@
 
     <!-- Metrics vs last month -->
     <div class="metrics-card">
-      <div class="metrics-title">Novembro vs Outubro — parcial Nov (3 d.u. de 24) · Out completo (26 d.u.)</div>
+      <div class="metrics-title">Novembro vs Outubro — parcial Nov (4 d.u. de 24) · Out completo (26 d.u.)</div>
       <div class="metric-row">
         <div class="metric-name">Mensagens recebidas</div>
         <div class="metric-vals">
@@ -649,7 +649,7 @@
     </div><!-- /#calcSection -->
   </div><!-- /.container -->
 
-  <div class="footer">SeuPhone · Dados de Novembro 2026 (parcial · 01–05/11) · Atualizado em 05/11/2026</div>
+  <div class="footer">SeuPhone · Dados de Novembro 2026 (parcial · 01–06/11) · Atualizado em 06/11/2026</div>
 </div>
 
 <script>
@@ -660,11 +660,11 @@ const SELLERS = {
     name: 'Dora Tielly',
     initials: 'DT',
     avatarClass: 'av-green',
-    rank: 1,
-    rankEmoji: '🥇',
-    rankText: '1º lugar em Novembro (parcial)',
-    rankBannerClass: 'gold',
-    rankSub: 'Novembro parcial (até 05/nov) · 13v · Out 3° (56v)',
+    rank: 2,
+    rankEmoji: '🥈',
+    rankText: '2º lugar em Novembro (parcial)',
+    rankBannerClass: 'silver',
+    rankSub: 'Novembro parcial (até 06/nov) · 13v · Out 3° (56v)',
 
     jun: {
       vendas: 13, msgs: null, conv: null,
@@ -684,23 +684,23 @@ const SELLERS = {
     name: 'Mariah',
     initials: 'MA',
     avatarClass: 'av-orange',
-    rank: 2,
-    rankEmoji: '🥈',
-    rankText: '2º lugar em Novembro (parcial)',
-    rankBannerClass: 'silver',
-    rankSub: 'Novembro parcial (até 05/nov) · 7v · Out 1° (63v) 🥇',
+    rank: 1,
+    rankEmoji: '🥇',
+    rankText: '1º lugar em Novembro (parcial)',
+    rankBannerClass: 'gold',
+    rankSub: 'Novembro parcial (até 06/nov) · 14v · Out 1° (63v) 🥇',
 
     jun: {
-      vendas: 7, msgs: null, conv: null,
-      acess: 1099.97, ticket: 157.14,
-      perf: 7.0
+      vendas: 14, msgs: null, conv: null,
+      acess: 2229.91, ticket: 159.28,
+      perf: 14.0
     },
     mai: {
       vendas: 63, msgs: 326, conv: 15.03,
       acess: 10058.33, ticket: 159.65
     },
-    history: [17, 67, 66, 83, 101, 77, 58, 85, 88, 63, 7],
-    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [7] }
+    history: [17, 67, 66, 83, 101, 77, 58, 85, 88, 63, 14],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [14] }
   },
 
   gaby: {
@@ -712,19 +712,19 @@ const SELLERS = {
     rankEmoji: '🥉',
     rankText: '3º lugar em Novembro (parcial)',
     rankBannerClass: 'bronze',
-    rankSub: 'Novembro parcial (até 05/nov) · 7v · Out 2° (62v) 🥈',
+    rankSub: 'Novembro parcial (até 06/nov) · 8v · Out 2° (62v) 🥈',
 
     jun: {
-      vendas: 7, msgs: null, conv: null,
-      acess: 830.0, ticket: 118.57,
-      perf: 7.0
+      vendas: 8, msgs: null, conv: null,
+      acess: 960.0, ticket: 120.0,
+      perf: 8.0
     },
     mai: {
       vendas: 62, msgs: 382, conv: 12.57,
       acess: 5675.52, ticket: 91.54
     },
-    history: [null, null, 63, 57, 72, 70, 70, 59, null, 62, 7],
-    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [7] }
+    history: [null, null, 63, 57, 72, 70, 70, 59, null, 62, 8],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [8] }
   },
 
   rayssa: {
@@ -736,19 +736,19 @@ const SELLERS = {
     rankEmoji: '4°',
     rankText: '4º lugar em Novembro (parcial)',
     rankBannerClass: 'bronze',
-    rankSub: 'Novembro parcial (até 05/nov) · 5v · Out 4° (52v)',
+    rankSub: 'Novembro parcial (até 06/nov) · 7v · Out 4° (52v)',
 
     jun: {
-      vendas: 5, msgs: null, conv: null,
-      acess: 0.0, ticket: 0.0,
-      perf: 5.0
+      vendas: 7, msgs: null, conv: null,
+      acess: 0.0, ticket: 0.00,
+      perf: 7.0
     },
     mai: {
       vendas: 52, msgs: 308, conv: 12.34,
       acess: 3223, ticket: 61.98
     },
-    history: [null, null, null, null, null, null, null, null, null, 52, 5],
-    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [5] }
+    history: [null, null, null, null, null, null, null, null, null, 52, 7],
+    weeks:   { labels: [["Sem 1","01–08 Nov"]], vendas: [7] }
   }
 };
 
@@ -885,7 +885,7 @@ function showDashboard(key) {
   av.className = 'db-avatar ' + s.avatarClass;
   av.textContent = s.initials;
   document.getElementById('dbName').textContent   = s.name;
-  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 05/11 · mensagens e conversão ainda sem dados';
+  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 06/11 · mensagens e conversão ainda sem dados';
 
   // Ranking banner
   const rb = document.getElementById('rankBanner');
@@ -929,7 +929,7 @@ function showDashboard(key) {
   perfPctEl.textContent = j.perf.toFixed(1).replace('.',',') + '%';
   perfPctEl.style.color = j.perf >= 100 ? '#34d399' : j.perf >= 80 ? '#fbbf24' : '#f87171';
   document.getElementById('perfDetail').textContent = j.vendas + ' aparelhos vendidos · meta do mês: 100 aparelhos';
-  document.getElementById('perfDu').textContent     = 'Vendas e acessórios conferidos no Bling de 01/11 a 05/11';
+  document.getElementById('perfDu').textContent     = 'Vendas e acessórios conferidos no Bling de 01/11 a 06/11';
 
   // Metrics table
   document.getElementById('mMsgs').textContent      = j.msgs == null ? '—' : j.msgs + ' msgs';
