@@ -280,6 +280,12 @@
       border:1px solid #2d3748; border-radius:8px; padding:5px 7px;
       background:#2d3748; color:#f1f5f9; text-align:center; outline:none;
     }
+    .calc-btn-copy {
+      display:block; width:100%; padding:11px; border-radius:12px; border:1px solid #2d3748;
+      background:#1a1f2e; color:#60a5fa; font-size:0.82rem; font-weight:600;
+      cursor:pointer; margin-bottom:8px; text-align:center;
+    }
+    .calc-btn-copy.copied { background:rgba(96,165,250,.15); border-color:#60a5fa; }
     .calc-btn-reg {
       display:block; width:100%; padding:14px; border-radius:14px; border:none;
       background:#34d399; color:#0f172a; font-size:0.9rem; font-weight:800;
@@ -562,6 +568,9 @@
         <div class="calc-row"><span class="lbl" id="cFParcelaLabel">Parcela (12x)</span><span class="val" id="cFParcela">R$ 0,00</span></div>
         <div id="cFMargemRest" style="display:none">0</div>
       </div>
+
+      <!-- Copiar proposta -->
+      <button class="calc-btn-copy" id="cBtnCopy" onclick="cCopiarProposta()">📋 Copiar proposta para WhatsApp</button>
 
       <!-- Comissão destaque -->
       <div class="calc-comissao-box">
@@ -1114,6 +1123,42 @@ function showDashboard(key) {
     cHist = [];
     localStorage.setItem(KEY_HIST, '[]');
     cRenderHist();
+  };
+
+  window.cCopiarProposta = function(){
+    const cliente  = document.getElementById('cCliente').value.trim();
+    const modelo   = document.getElementById('cModelo').value.trim();
+    const trocaFinal = document.getElementById('cFTroca').textContent;
+    const maq      = document.getElementById('cFMaq').textContent;
+    const parcelaLabel = document.getElementById('cFParcelaLabel').textContent;
+    const parcela  = document.getElementById('cFParcela').textContent;
+    const nome     = cPlano.nome;
+    const linhas = [];
+    if (cliente) linhas.push('👤 ' + cliente);
+    if (modelo)  linhas.push('📱 ' + modelo);
+    linhas.push('');
+    linhas.push('*Proposta SeuPhone*');
+    linhas.push('Plano: ' + nome);
+    linhas.push('Troca aceita: ' + trocaFinal);
+    linhas.push('Na maquininha: ' + maq);
+    linhas.push(parcelaLabel + ': ' + parcela);
+    const texto = linhas.join('
+');
+    navigator.clipboard.writeText(texto).then(function(){
+      const btn = document.getElementById('cBtnCopy');
+      btn.textContent = '✓ Copiado!';
+      btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent = '📋 Copiar proposta para WhatsApp'; btn.classList.remove('copied'); }, 2000);
+    }).catch(function(){
+      // fallback
+      const ta = document.createElement('textarea');
+      ta.value = texto; ta.style.position='fixed'; ta.style.opacity='0';
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta);
+      const btn = document.getElementById('cBtnCopy');
+      btn.textContent = '✓ Copiado!'; btn.classList.add('copied');
+      setTimeout(function(){ btn.textContent = '📋 Copiar proposta para WhatsApp'; btn.classList.remove('copied'); }, 2000);
+    });
   };
 
   window.cRenderHist = function(){
