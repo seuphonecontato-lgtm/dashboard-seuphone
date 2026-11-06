@@ -271,6 +271,10 @@
     .calc-slider-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:7px; }
     .calc-slider-row .lbl { font-size:0.78rem; color:#64748b; }
     .calc-slider-row .bval { font-size:0.85rem; font-weight:700; color:#60a5fa; }
+    .calc-comissao-live { text-align:right; }
+    .calc-comissao-live .cv-label { font-size:0.68rem; color:#64748b; margin-bottom:1px; }
+    .calc-comissao-live .cv-valor { font-size:1.3rem; font-weight:800; color:#34d399; line-height:1; }
+    .calc-comissao-live .cv-bonus { font-size:0.68rem; color:#475569; margin-top:2px; }
     input.calc-range { width:100%; accent-color:#60a5fa; height:4px; }
     .calc-slider-hints { display:flex; justify-content:space-between; font-size:0.68rem; color:#374151; margin-top:5px; }
     .calc-proposta {
@@ -584,12 +588,16 @@
       <!-- Slider bonificação -->
       <div class="calc-card">
         <div class="calc-slider-row">
-          <span class="lbl">Bonificação extra na troca</span>
-          <span class="bval" id="cBonusLabel">+R$ 0</span>
+          <span class="lbl">Desconto na troca</span>
+          <div class="calc-comissao-live">
+            <div class="cv-label">Sua comissão</div>
+            <div class="cv-valor" id="cComissaoLive">R$ 0,00</div>
+            <div class="cv-bonus" id="cBonusLabel">bônus: +R$ 0</div>
+          </div>
         </div>
         <input type="range" class="calc-range" id="cBonus" min="0" max="0" value="0" step="1" oninput="cCalcBonus()">
         <div class="calc-slider-hints">
-          <span>Sem bonificar</span>
+          <span>Sem desconto</span>
           <span id="cMaxLabel">Máximo: R$ 0</span>
         </div>
       </div>
@@ -612,14 +620,9 @@
       <!-- Copiar proposta -->
       <button class="calc-btn-copy" id="cBtnCopy" onclick="cCopiarProposta()">📋 Copiar proposta para WhatsApp</button>
 
-      <!-- Comissão destaque -->
-      <div class="calc-comissao-box">
-        <div>
-          <p class="titulo">Comissão</p>
-          <p class="sub" id="cComissaoDesc">5% × R$ 0 retidos</p>
-        </div>
-        <span class="valor" id="cFComissao">R$ 0,00</span>
-      </div>
+      <!-- Comissão destaque (mantém IDs para JS) -->
+      <div id="cFComissao" style="display:none">0</div>
+      <div id="cComissaoDesc" style="display:none"></div>
 
       <!-- Registrar -->
       <button class="calc-btn-reg" id="cBtnReg" onclick="cRegistrar()">✓ Registrar negociação</button>
@@ -1150,7 +1153,9 @@ function showDashboard(key) {
     const nP          = parseInt(nome)||1;
     const margemRetida = Math.max(0, margemTotal - bonus);
     const comissao    = margemRetida * (pct/100);
-    document.getElementById('cBonusLabel').textContent   = bonus>0 ? '+'+cFmt(bonus) : '+R$ 0';
+    document.getElementById('cBonusLabel').textContent   = bonus>0 ? 'bônus: +'+cFmt(bonus) : 'sem desconto';
+    const livEl = document.getElementById('cComissaoLive');
+    if (livEl){ livEl.textContent = cFmtDec(comissao); livEl.style.color = comissao < 5 ? '#f59e0b' : '#34d399'; }
     document.getElementById('cFTroca').textContent       = cFmt(trocaFinal);
     document.getElementById('cFMaq').textContent         = cFmt(maqFinal);
     document.getElementById('cFParcelaLabel').textContent = 'Parcela ('+nome+')';
