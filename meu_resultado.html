@@ -520,10 +520,8 @@
       <div class="calc-card">
         <p class="calc-card-label">Resultado sem bonificação</p>
         <div class="calc-row"><span class="lbl">Na maquininha</span><span class="val" id="cRMaq">R$ 0</span></div>
-        <div class="calc-row"><span class="lbl">Taxa sobre valor cheio</span><span class="val" id="cRTaxaCheio" style="color:#64748b">−R$ 0</span></div>
-        <div class="calc-row"><span class="lbl">Taxa sobre maquininha</span><span class="val" id="cRTaxaMaq" style="color:#64748b">−R$ 0</span></div>
         <hr class="calc-divider">
-        <div class="calc-row dest"><span class="lbl">Margem disponível</span><span class="val" id="cRMargem">R$ 0</span></div>
+        <div class="calc-row dest"><span class="lbl">Margem p/ bonificação</span><span class="val" id="cRMargem">R$ 0</span></div>
       </div>
 
       <!-- Comissão % config -->
@@ -1053,8 +1051,6 @@ function showDashboard(key) {
     const taxaMaq   = maq * taxa;
     const margem    = Math.max(0, taxaCheio - taxaMaq);
     document.getElementById('cRMaq').textContent        = cFmt(maq);
-    document.getElementById('cRTaxaCheio').textContent  = '−'+cFmt(taxaCheio);
-    document.getElementById('cRTaxaMaq').textContent    = '−'+cFmt(taxaMaq);
     document.getElementById('cRMargem').textContent     = cFmt(margem);
     const sl = document.getElementById('cBonus');
     sl.max = Math.floor(margem);
