@@ -1142,8 +1142,7 @@ function showDashboard(key) {
     linhas.push('Troca aceita: ' + trocaFinal);
     linhas.push('Na maquininha: ' + maq);
     linhas.push(parcelaLabel + ': ' + parcela);
-    const texto = linhas.join('
-');
+    const texto = linhas.join('\n');
     navigator.clipboard.writeText(texto).then(function(){
       const btn = document.getElementById('cBtnCopy');
       btn.textContent = '✓ Copiado!';
