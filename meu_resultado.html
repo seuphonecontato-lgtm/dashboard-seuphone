@@ -236,6 +236,18 @@
       width:100%; font-size:1rem; font-weight:700;
       border:none; background:transparent; color:#f1f5f9; outline:none;
     }
+    .calc-comparacao {
+      display:grid; grid-template-columns:repeat(2,1fr); gap:7px; margin-bottom:10px;
+    }
+    .calc-comp-item {
+      background:#1a1f2e; border:1px solid #2d3748; border-radius:12px;
+      padding:10px 8px; text-align:center; transition: border-color .15s;
+    }
+    .calc-comp-item.ativo { border-color:#60a5fa; background:rgba(96,165,250,.08); }
+    .calc-comp-plano { font-size:0.68rem; color:#64748b; margin-bottom:4px; text-transform:uppercase; letter-spacing:.04em; }
+    .calc-comp-parcela { font-size:1.05rem; font-weight:800; color:#f1f5f9; line-height:1.1; }
+    .calc-comp-mes { font-size:0.62rem; color:#64748b; margin-top:2px; }
+    .calc-comp-tabela { font-size:0.68rem; color:#475569; margin-top:4px; }
     .calc-tabela-ajust {
       background:rgba(96,165,250,.07); border:1px solid rgba(96,165,250,.2);
       border-radius:10px; padding:8px 12px; margin-bottom:10px;
@@ -511,6 +523,34 @@
           <div class="calc-input-wrap"><span>R$</span>
             <input type="number" id="cTroca" value="" inputmode="numeric" placeholder="0" oninput="cCalc()">
           </div>
+        </div>
+      </div>
+
+      <!-- Comparação de parcelas -->
+      <div class="calc-comparacao" id="cComparacao">
+        <div class="calc-comp-item ativo" id="cComp12">
+          <div class="calc-comp-plano">12x</div>
+          <div class="calc-comp-parcela" id="cP12">—</div>
+          <div class="calc-comp-mes">/ mês</div>
+          <div class="calc-comp-tabela" id="cT12"></div>
+        </div>
+        <div class="calc-comp-item" id="cComp18">
+          <div class="calc-comp-plano">18x</div>
+          <div class="calc-comp-parcela" id="cP18">—</div>
+          <div class="calc-comp-mes">/ mês</div>
+          <div class="calc-comp-tabela" id="cT18"></div>
+        </div>
+        <div class="calc-comp-item" id="cComp21">
+          <div class="calc-comp-plano">21x</div>
+          <div class="calc-comp-parcela" id="cP21">—</div>
+          <div class="calc-comp-mes">/ mês</div>
+          <div class="calc-comp-tabela" id="cT21"></div>
+        </div>
+        <div class="calc-comp-item" id="cCompPIX">
+          <div class="calc-comp-plano">PIX / À vista</div>
+          <div class="calc-comp-parcela" id="cPPIX">—</div>
+          <div class="calc-comp-mes">na máquina</div>
+          <div class="calc-comp-tabela" id="cTPIX"></div>
         </div>
       </div>
 
@@ -1059,12 +1099,43 @@ function showDashboard(key) {
     const margem    = Math.max(0, taxaCheio - taxaMaq);
     document.getElementById('cRMaq').textContent        = cFmt(maq);
     document.getElementById('cRMargem').textContent     = cFmt(margem);
+    const bonus0 = parseInt(document.getElementById('cBonus').value)||0;
+    cAtualizaComparacao(novo12, troca, bonus0);
     const sl = document.getElementById('cBonus');
     sl.max = Math.floor(margem);
     sl.value = Math.min(parseFloat(sl.value)||0, Math.floor(margem));
     document.getElementById('cMaxLabel').textContent = 'Máximo: '+cFmt(margem);
     cCalcBonus();
   };
+
+  function cFmtParcela(v){
+    return 'R$ ' + v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+  }
+  function cFmtTabela(v){
+    return 'Tab: R$ ' + Math.round(v).toLocaleString('pt-BR');
+  }
+
+  function cAtualizaComparacao(novo12, troca, bonusAtual){
+    const bonus = bonusAtual || 0;
+    const planos = [
+      {id:'12',  n:12, mult:1.00},
+      {id:'18',  n:18, mult:1.06},
+      {id:'21',  n:21, mult:1.09},
+      {id:'PIX', n:0,  mult:1.00}
+    ];
+    planos.forEach(function(p){
+      const tab  = novo12 * p.mult;
+      const maq  = Math.max(0, tab - troca - bonus);
+      const isPix = p.id === 'PIX';
+      const parc = isPix ? maq : maq / p.n;
+      const el   = document.getElementById('cP'+p.id);
+      const elT  = document.getElementById('cT'+p.id);
+      const elC  = document.getElementById('cComp'+p.id);
+      if (el) el.textContent  = novo12 > 0 ? (isPix ? cFmt(parc) : cFmtParcela(parc)) : '—';
+      if (elT) elT.textContent = (!isPix && novo12 > 0) ? cFmtTabela(tab) : '';
+      if (elC) elC.classList.toggle('ativo', isPix ? cPlano.nome==='PIX' : cPlano.nome===p.n+'x');
+    });
+  }
 
   window.cCalcBonus = function(){
     const novo12 = parseFloat(document.getElementById('cNovo').value)||0;
@@ -1089,6 +1160,9 @@ function showDashboard(key) {
     mrEl.style.color = margemRetida < 100 ? '#f59e0b' : '#34d399';
     document.getElementById('cFComissao').textContent    = cFmtDec(comissao);
     document.getElementById('cComissaoDesc').textContent = pct+'% × '+cFmt(margemRetida)+' retidos';
+    const novo12b = parseFloat(document.getElementById('cNovo').value)||0;
+    const trocab  = parseFloat(document.getElementById('cTroca').value)||0;
+    cAtualizaComparacao(novo12b, trocab, bonus);
   };
 
   window.cRegistrar = function(){
