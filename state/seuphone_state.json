@@ -1,245 +1,260 @@
 {
-  "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
-  "month": "2026-11",
-  "last_processed_date": "2026-11-09",
-  "processed_order_ids": [
-    27308211294,
-    27307565848,
-    27307087064,
-    27306711462,
-    27305959608,
-    27305765855,
-    27305303886,
-    27296782691,
-    27296511521,
-    27295162964,
-    27294464231,
-    27294396384,
-    27293966426,
-    27291294311,
-    27304515257,
-    27303731383,
-    27296717903,
-    27295702714,
-    27294703844,
-    27293153006,
-    27308708033,
-    27308522281,
-    27307497675,
-    27296751353,
-    27295977578,
-    27295147125,
-    27294360715,
-    27294053958,
-    27293900460,
-    27307034780,
-    27306052569,
-    27303292756,
-    27295422870,
-    27266620037,
-    27318313360,
-    27319218086,
-    27315627516,
-    27329726414,
-    27329472236,
-    27328611862,
-    27327553089,
-    27327328896,
-    27326827629,
-    27229270334,
-    26880810578,
-    27329866115,
-    27329126772,
-    27327701249,
-    27326298910,
-    27273461093,
-    27334759494,
-    27335246020,
-    27333966831,
-    27333804402,
-    27333208406,
-    27334721492,
-    27348234829,
-    27335600977,
-    27335019662,
-    27334779190,
-    27334521316
-  ],
-  "base_manual": {
-    "dora": {
-      "vendas": 0,
-      "acess": 0.0
-    },
-    "mariah": {
-      "vendas": 0,
-      "acess": 0.0
-    },
-    "gaby": {
-      "vendas": 0,
-      "acess": 0.0
-    },
-    "rayssa": {
-      "vendas": 0,
-      "acess": 0.0
-    }
+ "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
+ "month": "2026-11",
+ "last_processed_date": "2026-11-09",
+ "processed_order_ids": [
+  27308211294,
+  27307565848,
+  27307087064,
+  27306711462,
+  27305959608,
+  27305765855,
+  27305303886,
+  27296782691,
+  27296511521,
+  27295162964,
+  27294464231,
+  27294396384,
+  27293966426,
+  27291294311,
+  27304515257,
+  27303731383,
+  27296717903,
+  27295702714,
+  27294703844,
+  27293153006,
+  27308708033,
+  27308522281,
+  27307497675,
+  27296751353,
+  27295977578,
+  27295147125,
+  27294360715,
+  27294053958,
+  27293900460,
+  27307034780,
+  27306052569,
+  27303292756,
+  27295422870,
+  27266620037,
+  27318313360,
+  27319218086,
+  27315627516,
+  27329726414,
+  27329472236,
+  27328611862,
+  27327553089,
+  27327328896,
+  27326827629,
+  27229270334,
+  26880810578,
+  27329866115,
+  27329126772,
+  27327701249,
+  27326298910,
+  27273461093,
+  27334759494,
+  27335246020,
+  27333966831,
+  27333804402,
+  27333208406,
+  27334721492,
+  27348234829,
+  27335600977,
+  27335019662,
+  27334779190,
+  27334521316,
+  27354056678,
+  27353686405,
+  27351800747,
+  27354284422,
+  27354134376,
+  27354087889,
+  27353869426,
+  27353508862,
+  27351172570,
+  27355451000,
+  27354691245,
+  27349980445,
+  27355630099,
+  27354525210,
+  27353071135
+ ],
+ "base_manual": {
+  "dora": {
+   "vendas": 0,
+   "acess": 0.0
   },
-  "accumulated_bling": {
-    "dora": {
-      "vendas": 14,
-      "acess": 740.0
-    },
-    "mariah": {
-      "vendas": 17,
-      "acess": 2729.91
-    },
-    "gaby": {
-      "vendas": 9,
-      "acess": 960.0
-    },
-    "rayssa": {
-      "vendas": 9,
-      "acess": 429.97
-    }
+  "mariah": {
+   "vendas": 0,
+   "acess": 0.0
   },
-  "vendedor_ids": {
-    "dora": 15596144709,
-    "mariah": 15596843551,
-    "gaby": 15596411344,
-    "rayssa": 15596979230
+  "gaby": {
+   "vendas": 0,
+   "acess": 0.0
   },
-  "accessories_product_codes": [
-    "7899716",
-    "7908100",
-    "ACESS_",
-    "CASETRNASP"
-  ],
-  "accessories_keywords": [
-    "PELÍCULA",
-    "PELICULA",
-    "CAPA",
-    "CASE",
-    "CARREGADOR",
-    "CABO",
-    "FONTE",
-    "PELÍCULA HPRIME",
-    "GORILA",
-    "HPRIME",
-    "GSHIELD",
-    "KAIDI"
-  ],
-  "exclude_situacao_ids": [
-    6,
-    12
-  ],
-  "github": {
-    "repo": "seuphonecontato-lgtm/dashboard-seuphone",
-    "branch": "main",
-    "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
-  },
-  "pendentes_confirmacao": {
-    "numeros_pedido": [],
-    "_note": "Sem pendentes em novembro."
-  },
-  "regras_vendas": "Cada aparelho/produto Apple ou similar (iPhone, iPad, AirPods, Apple Watch, MacBook, Apple Pencil, POCO etc.) = 1 venda POR UNIDADE (quantidade). Acessorios (keywords) so entram em R$ de acessorios. Manutencao/servico/entrega/frete nao contam. Pedido so de acessorio nao conta venda. Itens R$0 (INDICACAO, INSTAGRAM, CLIENTE) nao contam. Troca/garantia: conta 1 venda se houve pagamento no pedido (aparelho vendido); pedido R$0/manutencao nao conta; sempre avisar trocas na mensagem final. ATRIBUICAO: a venda e os acessorios contam para o vendedor registrado no pedido do Bling (campo vendedor), mesmo que a observacao cite outra pessoa. Situacoes 6 e 12 nunca contam.",
-  "processed_order_ids_mes_anterior": [
-    27236521817,
-    27136836154,
-    27230156161,
-    27229248679,
-    27226565408,
-    27248401245,
-    27239218503,
-    27237133304,
-    27235556043,
-    27231343666,
-    27231164111,
-    27230881896,
-    27229952674,
-    27247795554,
-    27239338358,
-    27235831391,
-    27235536279,
-    27228910697,
-    27228247931,
-    27226717702,
-    27211036294,
-    27248202650,
-    27241029843,
-    27228216474,
-    27226636076,
-    27216547227,
-    27250205480,
-    27249748472,
-    27256814386,
-    27256734759,
-    27255750316,
-    27257328980,
-    27240841581,
-    27258752837,
-    27268044308,
-    27267598726,
-    27264684884,
-    27267244866,
-    27265286285,
-    27265228528,
-    27264657730,
-    27264493559,
-    27268476522,
-    27266849706,
-    27266346323,
-    27264723546,
-    27269138948,
-    27268351287,
-    27268294343,
-    27267588286,
-    27266620037,
-    27265753628,
-    27264830032,
-    27273914074,
-    27273461093,
-    27272964463,
-    27271960375,
-    27273538880,
-    27180270181
-  ],
-  "totals_mes": {
-    "dora": {
-      "vendas": 14,
-      "acess": 740.0
-    },
-    "mariah": {
-      "vendas": 17,
-      "acess": 2729.91
-    },
-    "gaby": {
-      "vendas": 9,
-      "acess": 960.0
-    },
-    "rayssa": {
-      "vendas": 9,
-      "acess": 429.97
-    }
-  },
-  "historico_mensal": {
-    "2026-10": {
-      "vendas": {
-        "dora": 56,
-        "mariah": 63,
-        "gaby": 62,
-        "rayssa": 52
-      },
-      "acess": {
-        "dora": 5890.0,
-        "mariah": 10058.33,
-        "gaby": 5675.52,
-        "rayssa": 3223.0
-      },
-      "status": "fechado (auditoria 04/11)"
-    }
-  },
-  "acumulado_ano_meses_fechados": {
-    "jan_set": 2043,
-    "out": 233,
-    "total_jan_out": 2276
+  "rayssa": {
+   "vendas": 0,
+   "acess": 0.0
   }
+ },
+ "accumulated_bling": {
+  "dora": {
+   "vendas": 14,
+   "acess": 1000.0
+  },
+  "mariah": {
+   "vendas": 22,
+   "acess": 2989.91
+  },
+  "gaby": {
+   "vendas": 12,
+   "acess": 960.0
+  },
+  "rayssa": {
+   "vendas": 12,
+   "acess": 429.97
+  }
+ },
+ "vendedor_ids": {
+  "dora": 15596144709,
+  "mariah": 15596843551,
+  "gaby": 15596411344,
+  "rayssa": 15596979230
+ },
+ "accessories_product_codes": [
+  "7899716",
+  "7908100",
+  "ACESS_",
+  "CASETRNASP"
+ ],
+ "accessories_keywords": [
+  "PELÍCULA",
+  "PELICULA",
+  "CAPA",
+  "CASE",
+  "CARREGADOR",
+  "CABO",
+  "FONTE",
+  "PELÍCULA HPRIME",
+  "GORILA",
+  "HPRIME",
+  "GSHIELD",
+  "KAIDI"
+ ],
+ "exclude_situacao_ids": [
+  6,
+  12
+ ],
+ "github": {
+  "repo": "seuphonecontato-lgtm/dashboard-seuphone",
+  "branch": "main",
+  "pat_env_note": "Token armazenado em ~/.seuphone_pat (nao rastreado pelo git)"
+ },
+ "pendentes_confirmacao": {
+  "numeros_pedido": [],
+  "_note": "Sem pendentes em novembro."
+ },
+ "regras_vendas": "Cada aparelho/produto Apple ou similar (iPhone, iPad, AirPods, Apple Watch, MacBook, Apple Pencil, POCO etc.) = 1 venda POR UNIDADE (quantidade). Acessorios (keywords) so entram em R$ de acessorios. Manutencao/servico/entrega/frete nao contam. Pedido so de acessorio nao conta venda. Itens R$0 (INDICACAO, INSTAGRAM, CLIENTE) nao contam. Troca/garantia: conta 1 venda se houve pagamento no pedido (aparelho vendido); pedido R$0/manutencao nao conta; sempre avisar trocas na mensagem final. ATRIBUICAO: a venda e os acessorios contam para o vendedor registrado no pedido do Bling (campo vendedor), mesmo que a observacao cite outra pessoa. Situacoes 6 e 12 nunca contam.",
+ "processed_order_ids_mes_anterior": [
+  27236521817,
+  27136836154,
+  27230156161,
+  27229248679,
+  27226565408,
+  27248401245,
+  27239218503,
+  27237133304,
+  27235556043,
+  27231343666,
+  27231164111,
+  27230881896,
+  27229952674,
+  27247795554,
+  27239338358,
+  27235831391,
+  27235536279,
+  27228910697,
+  27228247931,
+  27226717702,
+  27211036294,
+  27248202650,
+  27241029843,
+  27228216474,
+  27226636076,
+  27216547227,
+  27250205480,
+  27249748472,
+  27256814386,
+  27256734759,
+  27255750316,
+  27257328980,
+  27240841581,
+  27258752837,
+  27268044308,
+  27267598726,
+  27264684884,
+  27267244866,
+  27265286285,
+  27265228528,
+  27264657730,
+  27264493559,
+  27268476522,
+  27266849706,
+  27266346323,
+  27264723546,
+  27269138948,
+  27268351287,
+  27268294343,
+  27267588286,
+  27266620037,
+  27265753628,
+  27264830032,
+  27273914074,
+  27273461093,
+  27272964463,
+  27271960375,
+  27273538880,
+  27180270181
+ ],
+ "totals_mes": {
+  "dora": {
+   "vendas": 14,
+   "acess": 1000.0
+  },
+  "mariah": {
+   "vendas": 22,
+   "acess": 2989.91
+  },
+  "gaby": {
+   "vendas": 12,
+   "acess": 960.0
+  },
+  "rayssa": {
+   "vendas": 12,
+   "acess": 429.97
+  }
+ },
+ "historico_mensal": {
+  "2026-10": {
+   "vendas": {
+    "dora": 56,
+    "mariah": 63,
+    "gaby": 62,
+    "rayssa": 52
+   },
+   "acess": {
+    "dora": 5890.0,
+    "mariah": 10058.33,
+    "gaby": 5675.52,
+    "rayssa": 3223.0
+   },
+   "status": "fechado (auditoria 04/11)"
+  }
+ },
+ "acumulado_ano_meses_fechados": {
+  "jan_set": 2043,
+  "out": 233,
+  "total_jan_out": 2276
+ }
 }
