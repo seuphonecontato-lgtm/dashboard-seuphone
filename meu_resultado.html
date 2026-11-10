@@ -448,7 +448,7 @@
 
     <!-- Metrics vs last month -->
     <div class="metrics-card">
-      <div class="metrics-title">Novembro vs Outubro — parcial Nov (4 d.u. de 24) · Out completo (26 d.u.)</div>
+      <div class="metrics-title">Novembro vs Outubro — parcial Nov (7 d.u. de 24) · Out completo (26 d.u.)</div>
       <div class="metric-row">
         <div class="metric-name">Mensagens recebidas</div>
         <div class="metric-vals">
@@ -649,7 +649,7 @@
     </div><!-- /#calcSection -->
   </div><!-- /.container -->
 
-  <div class="footer">SeuPhone · Dados de Novembro 2026 (parcial · 01–09/11) · Atualizado em 09/11/2026</div>
+  <div class="footer">SeuPhone · Dados de Novembro 2026 (parcial · 01–10/11) · Atualizado em 10/11/2026</div>
 </div>
 
 <script>
@@ -664,7 +664,7 @@ const SELLERS = {
     rankEmoji: '🥈',
     rankText: '2º lugar em Novembro (parcial)',
     rankBannerClass: 'silver',
-    rankSub: 'Novembro parcial (até 09/nov) · 14v · Out 3° (56v)',
+    rankSub: 'Novembro parcial (até 10/nov) · 14v · Out 3° (56v)',
 
     jun: {
       vendas: 14, msgs: null, conv: null,
@@ -688,7 +688,7 @@ const SELLERS = {
     rankEmoji: '🥇',
     rankText: '1º lugar em Novembro (parcial)',
     rankBannerClass: 'gold',
-    rankSub: 'Novembro parcial (até 09/nov) · 22v · Out 1° (63v) 🥇',
+    rankSub: 'Novembro parcial (até 10/nov) · 22v · Out 1° (63v) 🥇',
 
     jun: {
       vendas: 22, msgs: null, conv: null,
@@ -708,15 +708,15 @@ const SELLERS = {
     name: 'Gaby',
     initials: 'GA',
     avatarClass: 'av-pink',
-    rank: 3,
-    rankEmoji: '🥉',
-    rankText: '3º lugar em Novembro (parcial)',
+    rank: 4,
+    rankEmoji: '4°',
+    rankText: '4º lugar em Novembro (parcial)',
     rankBannerClass: 'bronze',
-    rankSub: 'Novembro parcial (até 09/nov) · 12v · Out 2° (62v) 🥈',
+    rankSub: 'Novembro parcial (até 10/nov) · 12v · Out 2° (62v) 🥈',
 
     jun: {
       vendas: 12, msgs: null, conv: null,
-      acess: 960.0, ticket: 80.0,
+      acess: 1020.0, ticket: 85.0,
       perf: 12.0
     },
     mai: {
@@ -732,23 +732,23 @@ const SELLERS = {
     name: 'Rayssa',
     initials: 'RA',
     avatarClass: 'av-violet',
-    rank: 4,
-    rankEmoji: '4°',
-    rankText: '4º lugar em Novembro (parcial)',
+    rank: 3,
+    rankEmoji: '🥉',
+    rankText: '3º lugar em Novembro (parcial)',
     rankBannerClass: 'bronze',
-    rankSub: 'Novembro parcial (até 09/nov) · 12v · Out 4° (52v)',
+    rankSub: 'Novembro parcial (até 10/nov) · 13v · Out 4° (52v)',
 
     jun: {
-      vendas: 12, msgs: null, conv: null,
-      acess: 429.97, ticket: 35.83,
-      perf: 12.0
+      vendas: 13, msgs: null, conv: null,
+      acess: 429.97, ticket: 33.07,
+      perf: 13.0
     },
     mai: {
       vendas: 52, msgs: 308, conv: 12.34,
       acess: 3223, ticket: 61.98
     },
-    history: [null, null, null, null, null, null, null, null, null, 52, 12],
-    weeks:   { labels: [["Sem 1","01–08 Nov"], ["Sem 2","09–15 Nov"]], vendas: [9, 3] }
+    history: [null, null, null, null, null, null, null, null, null, 52, 13],
+    weeks:   { labels: [["Sem 1","01–08 Nov"], ["Sem 2","09–15 Nov"]], vendas: [9, 4] }
   }
 };
 
@@ -885,7 +885,7 @@ function showDashboard(key) {
   av.className = 'db-avatar ' + s.avatarClass;
   av.textContent = s.initials;
   document.getElementById('dbName').textContent   = s.name;
-  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 09/11 · mensagens e conversão ainda sem dados';
+  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 10/11 · mensagens e conversão ainda sem dados';
 
   // Ranking banner
   const rb = document.getElementById('rankBanner');
@@ -929,7 +929,7 @@ function showDashboard(key) {
   perfPctEl.textContent = j.perf.toFixed(1).replace('.',',') + '%';
   perfPctEl.style.color = j.perf >= 100 ? '#34d399' : j.perf >= 80 ? '#fbbf24' : '#f87171';
   document.getElementById('perfDetail').textContent = j.vendas + ' aparelhos vendidos · meta do mês: 100 aparelhos';
-  document.getElementById('perfDu').textContent     = 'Vendas e acessórios conferidos no Bling de 01/11 a 09/11';
+  document.getElementById('perfDu').textContent     = 'Vendas e acessórios conferidos no Bling de 01/11 a 10/11';
 
   // Metrics table
   document.getElementById('mMsgs').textContent      = j.msgs == null ? '—' : j.msgs + ' msgs';

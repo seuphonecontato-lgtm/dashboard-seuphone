@@ -1,7 +1,7 @@
 {
  "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
  "month": "2026-11",
- "last_processed_date": "2026-11-09",
+ "last_processed_date": "2026-11-10",
  "processed_order_ids": [
   27308211294,
   27307565848,
@@ -78,7 +78,9 @@
   27349980445,
   27355630099,
   27354525210,
-  27353071135
+  27353071135,
+  27360557482,
+  27360496392
  ],
  "base_manual": {
   "dora": {
@@ -109,10 +111,10 @@
   },
   "gaby": {
    "vendas": 12,
-   "acess": 960.0
+   "acess": 1020.0
   },
   "rayssa": {
-   "vendas": 12,
+   "vendas": 13,
    "acess": 429.97
   }
  },
@@ -228,10 +230,10 @@
   },
   "gaby": {
    "vendas": 12,
-   "acess": 960.0
+   "acess": 1020.0
   },
   "rayssa": {
-   "vendas": 12,
+   "vendas": 13,
    "acess": 429.97
   }
  },
