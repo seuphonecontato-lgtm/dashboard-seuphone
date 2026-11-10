@@ -667,7 +667,7 @@ const SELLERS = {
     rankSub: 'Novembro parcial (até 10/nov) · 14v · Out 3° (56v)',
 
     jun: {
-      vendas: 14, msgs: null, conv: null,
+      vendas: 14, msgs: 105, conv: 8.57,
       acess: 1000.0, ticket: 71.43,
       perf: 14.0
     },
@@ -691,7 +691,7 @@ const SELLERS = {
     rankSub: 'Novembro parcial (até 10/nov) · 22v · Out 1° (63v) 🥇',
 
     jun: {
-      vendas: 22, msgs: null, conv: null,
+      vendas: 22, msgs: 94, conv: 17.02,
       acess: 2989.91, ticket: 135.91,
       perf: 22.0
     },
@@ -715,7 +715,7 @@ const SELLERS = {
     rankSub: 'Novembro parcial (até 10/nov) · 12v · Out 2° (62v) 🥈',
 
     jun: {
-      vendas: 12, msgs: null, conv: null,
+      vendas: 12, msgs: 88, conv: 12.5,
       acess: 1020.0, ticket: 85.0,
       perf: 12.0
     },
@@ -739,7 +739,7 @@ const SELLERS = {
     rankSub: 'Novembro parcial (até 10/nov) · 13v · Out 4° (52v)',
 
     jun: {
-      vendas: 13, msgs: null, conv: null,
+      vendas: 13, msgs: 96, conv: 11.46,
       acess: 429.97, ticket: 33.07,
       perf: 13.0
     },
@@ -885,7 +885,7 @@ function showDashboard(key) {
   av.className = 'db-avatar ' + s.avatarClass;
   av.textContent = s.initials;
   document.getElementById('dbName').textContent   = s.name;
-  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 10/11 · mensagens e conversão ainda sem dados';
+  document.getElementById('dbPeriod').textContent = 'Novembro 2026 · Vendas e acessórios até 10/11 · mensagens e conversão: parcial 01/11–07/11';
 
   // Ranking banner
   const rb = document.getElementById('rankBanner');
@@ -933,9 +933,9 @@ function showDashboard(key) {
 
   // Metrics table
   document.getElementById('mMsgs').textContent      = j.msgs == null ? '—' : j.msgs + ' msgs';
-  document.getElementById('mMsgsPrev').textContent  = hasPrev ? 'Out: ' + m.msgs + ' msgs' + (j.msgs == null ? ' · sem dados de Nov ainda' : ' · ' + pct(j.msgs, m.msgs)) : 'Nova integrante — sem histórico anterior';
+  document.getElementById('mMsgsPrev').textContent  = hasPrev ? 'Out: ' + m.msgs + ' msgs' + (j.msgs == null ? ' · sem dados de Nov ainda' : ' · parcial 01–07/11') : 'Nova integrante — sem histórico anterior';
   document.getElementById('mConv').textContent      = j.conv == null ? '—' : j.conv.toFixed(1).replace('.',',') + '%';
-  document.getElementById('mConvPrev').textContent  = hasPrev ? 'Out: ' + m.conv.toFixed(1).replace('.',',') + '%' + (j.conv == null ? ' · sem dados de Nov ainda' : ' · ' + pp(j.conv, m.conv)) : 'Nova integrante — sem histórico anterior';
+  document.getElementById('mConvPrev').textContent  = hasPrev ? 'Out: ' + m.conv.toFixed(1).replace('.',',') + '%' + (j.conv == null ? ' · sem dados de Nov ainda' : ' · parcial 01–07/11') : 'Nova integrante — sem histórico anterior';
   document.getElementById('mAcess').textContent     = brl(j.acess);
   document.getElementById('mAcessPrev').textContent = hasPrev ? 'Out: ' + brl(m.acess) + ' · ' + pct(j.acess, m.acess) : 'Nova integrante — sem histórico anterior';
   document.getElementById('mTicket').textContent    = brl(j.ticket);
