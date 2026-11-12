@@ -1,7 +1,7 @@
 {
   "_comment": "Estado da automacao diaria SeuPhone. Campos da raiz = MES CORRENTE. Atualizado pelo scheduled task.",
   "month": "2026-11",
-  "last_processed_date": "2026-11-11",
+  "last_processed_date": "2026-11-12",
   "processed_order_ids": [
     27308211294,
     27307565848,
@@ -101,7 +101,18 @@
     27364945983,
     27363576814,
     27367154411,
-    27366920100
+    27366920100,
+    27379339317,
+    27378527847,
+    27387985722,
+    27380064718,
+    27375417668,
+    27381338902,
+    27381087671,
+    27379550121,
+    27381407198,
+    27381046506,
+    27374392855
   ],
   "base_manual": {
     "dora": {
@@ -123,19 +134,19 @@
   },
   "accumulated_bling": {
     "dora": {
-      "vendas": 16,
+      "vendas": 17,
       "acess": 1340.0
     },
     "mariah": {
-      "vendas": 27,
-      "acess": 3389.91
+      "vendas": 29,
+      "acess": 3639.91
     },
     "gaby": {
-      "vendas": 17,
-      "acess": 1080.0
+      "vendas": 19,
+      "acess": 1130.0
     },
     "rayssa": {
-      "vendas": 15,
+      "vendas": 17,
       "acess": 429.97
     }
   },
@@ -242,19 +253,19 @@
   ],
   "totals_mes": {
     "dora": {
-      "vendas": 16,
+      "vendas": 17,
       "acess": 1340.0
     },
     "mariah": {
-      "vendas": 27,
-      "acess": 3389.91
+      "vendas": 29,
+      "acess": 3639.91
     },
     "gaby": {
-      "vendas": 17,
-      "acess": 1080.0
+      "vendas": 19,
+      "acess": 1130.0
     },
     "rayssa": {
-      "vendas": 15,
+      "vendas": 17,
       "acess": 429.97
     }
   },
